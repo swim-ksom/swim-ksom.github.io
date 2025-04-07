@@ -1,0 +1,219 @@
+/* style2025.css - Accessible & Responsive Design System */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@layer base {
+    :root {
+        /* Light Theme */
+        --gradient-noble: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
+        --gradient-gold: linear-gradient(90deg, #d4af37 0%, #fde047 100%);
+        --glass-bg: rgba(255, 255, 255, 0.92);
+        --text-primary: #0f172a;
+        --text-secondary: #334155;
+        --surface-primary: #ffffff;
+        --surface-secondary: #f8fafc;
+        --spacing-unit: 1rem;
+        --radius-base: 0.5rem;
+        
+        /* Accessible Focus Ring */
+        --focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.5);
+    }
+
+    /* Dark Theme */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --gradient-noble: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 50%, #0f172a 100%);
+            --gradient-gold: linear-gradient(90deg, #fde047 0%, #d4af37 100%);
+            --glass-bg: rgba(15, 23, 42, 0.95);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --surface-primary: #0f172a;
+            --surface-secondary: #1e293b;
+        }
+    }
+
+    html {
+        font-family: 'Manrope', system-ui, sans-serif;
+        scroll-behavior: smooth;
+        color: var(--text-primary);
+        background: var(--surface-secondary);
+    }
+
+    body {
+        min-height: 100vh;
+        line-height: 1.6;
+        transition: background-color 0.3s ease;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--text-primary);
+    }
+
+    /* Accessibility: Focus States */
+    *:focus-visible {
+        outline: none;
+        box-shadow: var(--focus-ring);
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+@layer utilities {
+    /* Responsive Spacing System */
+    .padding-x { padding-left: var(--spacing-unit); padding-right: var(--spacing-unit); }
+    .padding-y { padding-top: var(--spacing-unit); padding-bottom: var(--spacing-unit); }
+    
+    @media (min-width: 640px) {
+        .sm\:padding-x { padding-left: calc(var(--spacing-unit) * 1.5); padding-right: calc(var(--spacing-unit) * 1.5); }
+        .sm\:padding-y { padding-top: calc(var(--spacing-unit) * 1.5); padding-bottom: calc(var(--spacing-unit) * 1.5); }
+    }
+
+    /* Flex & Grid Utilities */
+    .flex-center { display: flex; align-items: center; justify-content: center; }
+    .grid-auto-fit { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    
+    /* Typography Scale */
+    .text-step-0 { font-size: 1rem; }
+    .text-step-1 { font-size: clamp(1.25rem, 4vw, 1.5rem); }
+    .text-step-2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+
+    /* Form Elements */
+    .input-field {
+        padding: 0.75rem;
+        border: 2px solid var(--text-secondary);
+        border-radius: var(--radius-base);
+        background: var(--surface-primary);
+        transition: border-color 0.3s ease;
+    }
+
+    .input-field:focus {
+        border-color: var(--text-primary);
+    }
+
+    /* Loading States */
+    .spinner {
+        width: 2rem;
+        height: 2rem;
+        border: 3px solid var(--text-secondary);
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    /* Modal Transitions */
+    .modal-enter {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    .modal-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.3s ease-out;
+    }
+}
+
+@layer components {
+    /* Enhanced Card Component */
+    .card {
+        background: var(--surface-primary);
+        border-radius: calc(var(--radius-base) * 2);
+        padding: var(--spacing-unit);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-2px);
+    }
+
+    /* Accessible Navigation */
+    .nav-link {
+        position: relative;
+        padding: 0.5rem 1rem;
+        color: var(--text-secondary);
+    }
+
+    .nav-link[aria-current="page"] {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    /* Form Validation */
+    .input-error {
+        border-color: #dc2626;
+        background: #fee2e2;
+    }
+
+    .error-message {
+        color: #dc2626;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Dark Mode Toggle */
+    .theme-switcher {
+        position: relative;
+        padding: 0.5rem;
+        border-radius: var(--radius-base);
+        background: var(--surface-secondary);
+    }
+
+    /* Tooltip System */
+    [data-tooltip] {
+        position: relative;
+        cursor: help;
+    }
+
+    [data-tooltip]:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--surface-primary);
+        color: var(--text-primary);
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-base);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        white-space: nowrap;
+    }
+
+    /* Responsive Tables */
+    .responsive-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Breakpoint System */
+@media (min-width: 640px) {
+    .sm\:text-balance { text-wrap: balance; }
+}
+
+@media (min-width: 768px) {
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Print Styles */
+@media print {
+    body { background: white; color: black; }
+    .no-print { display: none; }
+}
