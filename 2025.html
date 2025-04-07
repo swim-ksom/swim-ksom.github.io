@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIM@KSoM</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SWIM@KSoM 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -22,22 +21,9 @@
     </style>
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-indigo-50 min-h-screen pt-16">
-
-    <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div class="flex justify-center items-center h-16 space-x-4 md:space-x-8 overflow-x-auto">
-                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">About</a>
-                <a href="#speakers" class="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Speakers</a>
-                <a href="#schedule" class="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Schedule</a>
-                <a href="#syllabus" class="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Syllabus</a>
-                <a href="#resources" class="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Resources</a>
-                <a href="#candidates" class="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Candidates</a>
-            </div>
-        </div>
-    </nav>
+    <header id="header"></header>
 
     <div class="container mx-auto px-4 py-8 md:px-6 md:py-12 lg:px-8 lg:py-16 max-w-6xl">
-
         <section id="about" class="mb-12 md:mb-16">
             <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 md:mb-10 text-center relative pb-4 section-title-underline">About SWIM@KSoM 2025</h2>
             <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
@@ -247,8 +233,9 @@
                 </p>
             </div>
         </section>
-
     </div>
+
+    <footer id="footer"></footer>
 
     <script>
         MathJax = {
@@ -266,6 +253,19 @@
                 load: ['[tex]/ams']
             }
         };
+
+        // Load header and footer
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
     </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
