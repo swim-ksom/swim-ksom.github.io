@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWIM@KSoM 2025 - Modernized</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Add smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Offset for fixed navbar */
+        :target {
+            scroll-margin-top: 80px; /* Adjust based on navbar height */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-indigo-50 min-h-screen pt-16">
+
+    <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="flex justify-center items-center h-16 space-x-4 md:space-x-8 overflow-x-auto">
+                 <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">About</a>
+                 <a href="#speakers" class="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Speakers</a>
+                 <a href="#schedule" class="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Schedule</a>
+                 <a href="#syllabus" class="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Syllabus</a>
+                 <a href="#resources" class="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Resources</a>
+                 <a href="#candidates" class="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">Candidates</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8 md:px-6 md:py-12 lg:px-8 lg:py-16 max-w-6xl">
+
+        <div id="header-placeholder">
+            <div class="text-center p-10 text-gray-500">Loading header...</div>
+        </div>
+
+        <section id="about" class="mb-12 md:mb-16"> 
+            <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 md:mb-10 text-center relative pb-4 section-title-underline">About SWIM@KSoM 2025</h2>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+                <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                    SWIM@KSoM is an intensive instructional school in Mathematics planned at Kannur University (Thavakkara Campus) from May 05, 2025 to May 30, 2025. The workshop involves around 40 lectures on Analysis, Algebra and Linear Algebra, which are augmented by problem solving sessions. This workshop is intended for highly motivated BSc students entering into their third year. The lectures are given by experienced and well known mathematicians.
+                </p>
+            </div>
+        </section>
+
+        <section id="speakers" class="mb-12 md:mb-16"> 
+            <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 md:mb-10 text-center relative pb-4 section-title-underline">List of Speakers</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <li class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col text-center">
+                    <strong class="text-xl md:text-2xl font-semibold text-purple-700 mb-3">Analysis</strong>
+                    <span class="text-gray-600 text-base md:text-lg leading-relaxed">
+                        Manjunath Krishnapur (IISc Bengaluru)<br>
+                        Anwoy Maitra (IIT Madras)<br>
+                        E.K. Narayanan (IISc Bengaluru)<br>
+                        K. Sandeep (TIFR CAM Bengaluru)
+                    </span>
+                </li>
+                <li class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col text-center">
+                    <strong class="text-xl md:text-2xl font-semibold text-indigo-700 mb-3">Algebra</strong>
+                    <span class="text-gray-600 text-base md:text-lg leading-relaxed">
+                        K.N. Raghavan (IMSc Chennai/Krea University)<br>
+                        Krishna Hanumanthu (Chennai Mathematical Institute)<br>
+                        R. Venkatesh (IISc Bengaluru)<br>
+                        U.K. Anandavardhanan (IIT Bombay)
+                    </span>
+                </li>
+                <li class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 flex flex-col text-center md:col-span-2 lg:col-span-1">
+                     <strong class="text-xl md:text-2xl font-semibold text-teal-700 mb-3">Linear Algebra</strong>
+                     <span class="text-gray-600 text-base md:text-lg leading-relaxed">
+                        Balakumar G.P. (IIT Palakkad)<br>
+                        Aprameyan P. (IIT Madras)<br>
+                        Jayanthan A.J. (KSoM Kozhikode)<br>
+                        Divakaran D. (Azim Premji University, Bengaluru)
+                    </span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="schedule" class="mb-12 md:mb-16"> 
+             <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 md:mb-10 text-center relative pb-4 section-title-underline">4-Week Lecture Schedule (May 5 - May 30)</h2>
+            <div class="overflow-x-auto bg-white rounded-xl shadow-lg border border-gray-200">
+                <table class="w-full min-w-[600px] text-left text-sm md:text-base">
+                    <thead class="bg-gradient-to-r from-purple-600 to-indigo-700 text-white uppercase tracking-wider">
+                        <tr>
+                            <th class="p-4 md:p-5 font-semibold w-1/5">Date</th>
+                            <th class="p-4 md:p-5 font-semibold w-2/5">Morning Session</th>
+                            <th class="p-4 md:p-5 font-semibold w-2/5">Afternoon Session</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                         {/* Color coded schedule rows... */}
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 5 (Mon)</td>
+                            <td class="p-4 md:p-5 text-green-700 bg-yellow-100">Introduction to University Mathematics</td>
+                            <td class="p-4 md:p-5 text-green-700 bg-yellow-100">Introduction to University Mathematics</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 6 (Tue)</td>
+                            <td class="p-4 md:p-5 text-green-700 bg-yellow-100">Introduction to University Mathematics</td>
+                            <td class="p-4 md:p-5 text-green-700 bg-yellow-100">Introduction to University Mathematics</td>
+                        </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 7 (Wed)</td>
+                            <td class="p-4 md:p-5 text-gray-700 bg-purple-100">Analysis</td>
+                            <td class="p-4 md:p-5 text-gray-700 bg-blue-100">Algebra</td>
+                        </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 8 (Thu)</td>
+                            <td class="p-4 md:p-5 text-gray-700 bg-teal-100">Linear Algebra</td>
+                            <td class="p-4 md:p-5 text-gray-700 bg-purple-100">Analysis</td>
+                        </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 9 (Fri)</td>
+                            <td class="p-4 md:p-5 text-gray-700 bg-blue-100">Algebra</td>
+                            <td class="p-4 md:p-5 text-gray-700 bg-teal-100">Linear Algebra</td>
+                        </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 12 (Mon)</td>
+                            <td class="p-4 md:p-5 text-gray-700 bg-purple-100">Analysis</td>
+                            <td class="p-4 md:p-5 text-gray-700 bg-blue-100">Algebra</td>
+                        </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 13 (Tue)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-teal-100">Linear Algebra</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-purple-100">Analysis</td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 14 (Wed)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-blue-100">Algebra</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-teal-100">Linear Algebra</td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 15 (Thu)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-purple-100">Analysis</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-blue-100">Algebra</td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 16 (Fri)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-teal-100">Linear Algebra</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-purple-100">Analysis</td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 19 (Mon)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-blue-100">Algebra</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-teal-100">Linear Algebra</td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 20 (Tue)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-purple-100">Analysis</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-blue-100">Algebra</td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 21 (Wed)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-teal-100">Linear Algebra</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-purple-100">Analysis</td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 22 (Thu)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-blue-100">Algebra</td>
+                             <td class="p-4 md:p-5 text-gray-500 italic bg-gray-100">No Session</td>
+                             </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 23 (Fri)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-purple-100">Analysis</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-blue-100">Algebra</td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 26 (Mon)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-teal-100">Linear Algebra</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-purple-100">Analysis</td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 27 (Tue)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-blue-100">Algebra</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-teal-100">Linear Algebra</td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 28 (Wed)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-purple-100">Analysis</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-blue-100">Algebra</td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 29 (Thu)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-teal-100">Linear Algebra</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-purple-100">Analysis</td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="p-4 md:p-5 font-medium text-gray-700 align-top">May 30 (Fri)</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-blue-100">Algebra</td>
+                             <td class="p-4 md:p-5 text-gray-700 bg-teal-100">Linear Algebra</td>
+                         </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="syllabus" class="mb-12 md:mb-16"> 
+            <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 md:mb-10 text-center relative pb-4 section-title-underline">Syllabus</h2>
+             <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 space-y-6">
+                 <div>
+                     <h3 class="text-2xl font-semibold text-indigo-700 mb-3">Introduction to University Mathematics</h3>
+                     <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                         This introductory module covers fundamental concepts including the Natural Numbers, the Principle of Mathematical Induction, the Binomial Theorem, and an Introduction to Sets (covering sections 1.1, 1.2, 1.3, 2.1). It delves into the Algebra of Sets and the concept of Cardinality (sections 2.2, 2.3, 2.4). Essential tools like Logical Notation, Relations, Equivalence Relations, and Functions are introduced (sections 5.1, 3.1, 3.2, 3.3, 4.1, 4.2, 4.3). The module concludes with techniques for Handling Logical Notation, understanding Quantifiers, Constructing Mathematical Statements, developing Proofs, and general Problem Solving strategies (sections 5.1, 5.2, 5.3, 6.1, 6.2, 6.3).
+                     </p>
+                 </div>
+                 <div class="border-t border-gray-200 pt-6">
+                     <h3 class="text-2xl font-semibold text-purple-700 mb-3">Analysis</h3>
+                     <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                         Based on <strong>Tao's Analysis - I</strong>, this course covers foundational topics starting with the Natural Numbers (Ch 2.1-2.3) and Set Theory, including functions, images, and cardinality (Ch 3.1-3.6). It then introduces the Integers and Rationals, Absolute Value, and the concept of gaps in rational numbers (Ch 4.1-4.4). A rigorous construction of the Real Numbers is presented (Ch 5.1-5.4), followed by the Axiom of Completeness and Limits of Sequences (Ch 5.5-5.6, 6.1). The course explores Continuous Functions on R, covering Subsets of the Real Line, the Algebra of Continuous Functions, Limiting Values, properties of Continuous Functions, Monotonic Functions, and Uniform Continuity (Ch 9.1-9.5, 9.8-9.10). Finally, the basics of Differentiation are covered, including definitions, Local Maxima/Minima, properties of Monotone Functions, the Inverse Function Theorem, and L'Hôpital's Rule (Ch 10.1-10.5).
+                     </p>
+                 </div>
+                 <div class="border-t border-gray-200 pt-6">
+                     <h3 class="text-2xl font-semibold text-indigo-700 mb-3">Algebra</h3>
+                     <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                         Based on <strong>Artin's Algebra</strong>, this course begins with Matrix Operations, Row Reduction, the Matrix Transpose, Determinants, and Permutations (Ch 1.1-1.5). It then introduces fundamental algebraic structures, covering Laws of Composition, Groups and Subgroups, Subgroups of the Additive Group of Integers, Cyclic Groups, Homomorphisms, and Isomorphisms (Ch 2.1-2.6). Concepts like Equivalence Relations, Partitions, Cosets, Modular Arithmetic, the Correspondence Theorem, Product Groups, and Quotient Groups are explored (Ch 2.7-2.12). The course also touches upon Group Actions, including Cayley's Theorem (Ch 7.1), the Class Equation (Ch 7.2), and concludes with the Sylow Theorems (Ch 7.7).
+                     </p>
+                 </div>
+                 <div class="border-t border-gray-200 pt-6">
+                     <h3 class="text-2xl font-semibold text-teal-700 mb-3">Linear Algebra</h3>
+                     <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                         Based on <strong>Artin's Algebra</strong>, this course covers core concepts of linear algebra. It starts with Subspaces of $R^{n}$ (Ch 3.1) and introduces the concept of Fields (Ch 3.2). The definition and properties of Vector Spaces are discussed (Ch 3.3), followed by Bases and Dimension (Ch 3.4), techniques for Computing with Bases (Ch 3.5), and Direct Sums (Ch 3.6). The course then moves to Linear Operators (Ch 4.1), the Dimension Formula (Ch 4.2), and representing linear maps using the Matrix of a Linear Transformation (Ch 4.3). Key topics like Eigenvectors and Eigenvalues (Ch 4.4), the Characteristic Polynomial (Ch 4.5), and finding Triangular and Diagonal Forms (Ch 4.6) are also covered.
+                     </p>
+                 </div>
+             </div>
+        </section>
+
+        <section id="resources" class="mb-12 md:mb-16"> 
+            <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 md:mb-10 text-center relative pb-4 section-title-underline">Resources</h2>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+                <h3 class="text-2xl font-semibold text-teal-700 mb-4">Linear Algebra Lecture Notes</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><a href="LinearAlgebraLectures/Lecture 1.pdf" target="_blank" class="text-indigo-600 hover:text-indigo-800 hover:underline">Lecture Notes 1 (PDF)</a></li>
+                    <li><a href="LinearAlgebraLectures/lecture2.pdf" target="_blank" class="text-indigo-600 hover:text-indigo-800 hover:underline">Lecture Notes 2 (PDF)</a></li>
+                    <li><a href="LinearAlgebraLectures/lecture3.pdf" target="_blank" class="text-indigo-600 hover:text-indigo-800 hover:underline">Lecture Notes 3 (PDF)</a></li>
+                    <li><a href="LinearAlgebraLectures/lecture4.pdf" target="_blank" class="text-indigo-600 hover:text-indigo-800 hover:underline">Lecture Notes 4 (PDF)</a></li>
+                    <li><a href="LinearAlgebraLectures/lecture5.pdf" target="_blank" class="text-indigo-600 hover:text-indigo-800 hover:underline">Lecture Notes 5 (PDF)</a></li>
+                    </ul>
+                <p class="mt-4 text-sm text-gray-500">Note: Links assume PDF files are located in a folder named 'LinearAlgebraLectures' relative to this HTML file.</p>
+            </div>
+        </section>
+
+        <section id="candidates"> 
+             <div class="p-6 md:p-8 bg-gradient-to-r from-yellow-50 to-lime-50 rounded-xl shadow-lg border border-yellow-200 text-center animate-pulse-light">
+                <p class="text-lg md:text-xl font-medium text-gray-700">
+                    Selected Candidates: Will be updated after the selection is complete
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const headerPlaceholder = document.getElementById('header-placeholder');
+          if (!headerPlaceholder) {
+              console.error('Header placeholder element not found.');
+              return;
+          }
+          fetch('layout2025.html')
+            .then(response => {
+              if (!response.ok) { throw new Error('Network response was not ok: ' + response.statusText); }
+              return response.text();
+            })
+            .then(html => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, 'text/html');
+              const headerElement = doc.querySelector('header');
+              if (headerElement) {
+                headerPlaceholder.innerHTML = '';
+                headerPlaceholder.appendChild(headerElement);
+              } else {
+                 console.error('Header element not found in layout2025.html');
+                 headerPlaceholder.innerHTML = '<p class="text-red-500 text-center py-10">Error: Could not load header content from layout2025.html.</p>';
+              }
+            })
+            .catch(error => {
+              console.error('Error fetching or processing layout2025.html:', error);
+              headerPlaceholder.innerHTML = '<p class="text-red-500 text-center py-10">Error loading header from layout2025.html. Please check console.</p>';
+            });
+        });
+    </script>
+
+    <script>
+        MathJax = {
+          tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+          svg: { fontCache: 'global' }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</body>
+</html>
