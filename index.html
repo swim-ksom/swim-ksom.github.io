@@ -9,6 +9,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
+
     <script>
         MathJax = {
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
@@ -18,29 +20,6 @@
     <script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
     </script>
-
-    <style>
-        .section-title-underline::after {
-            content: '';
-            display: block;
-            width: 60px; /* Adjust width */
-            height: 4px; /* Adjust thickness */
-            background-color: #4f46e5; /* Indigo color */
-            margin: 8px auto 0; /* Center the line */
-            border-radius: 2px;
-        }
-        /* Simple pulse animation */
-        @keyframes pulse-light {
-            0%, 100% { opacity: 1; }
-            50% { opacity: .9; }
-        }
-        .animate-pulse-light {
-            animation: pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        body {
-            font-family: 'Inter', sans-serif; /* Apply Inter font */
-        }
-    </style>
 
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-indigo-50 min-h-screen flex flex-col">
@@ -102,7 +81,7 @@
     </main>
 
     <div id="footer-placeholder">
-        </div>
+    </div>
 
     <script>
         // Function to fetch and insert HTML content from external files
