@@ -9,8 +9,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-
     <script>
         MathJax = {
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
@@ -20,6 +18,29 @@
     <script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
     </script>
+
+    <style>
+        .section-title-underline::after {
+            content: '';
+            display: block;
+            width: 60px; /* Adjust width */
+            height: 4px; /* Adjust thickness */
+            background-color: #4f46e5; /* Indigo color */
+            margin: 8px auto 0; /* Center the line */
+            border-radius: 2px;
+        }
+        /* Simple pulse animation */
+        @keyframes pulse-light {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .9; }
+        }
+        .animate-pulse-light {
+            animation: pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        body {
+            font-family: 'Inter', sans-serif; /* Apply Inter font */
+        }
+    </style>
 
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-indigo-50 min-h-screen flex flex-col">
@@ -43,24 +64,45 @@
         </section>
 
         <section id="announcement" class="mb-12 md:mb-16">
-             <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 md:mb-10 text-center relative pb-4 section-title-underline">Upcoming Edition: SWIM 2025</h2>
-             <div class="p-6 md:p-8 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-xl shadow-lg border border-indigo-200 text-center animate-pulse-light">
-                 <p class="text-lg md:text-xl font-medium text-gray-800 mb-4">
-                      The next edition of the SWIM@KSoM is scheduled to take place from <strong class="text-indigo-700">May 5, 2025</strong> to <strong class="text-indigo-700">May 30, 2025</strong> at the Thavakkara campus of Kannur University.
-                  </p>
-                 <p class="text-base md:text-lg text-gray-700 mb-6">
-                     Detailed information about the speakers, schedule, syllabus, and application process for SWIM@KSoM 2025 can be found in <a href="https://swim-ksom.github.io/2025">this website</a>
+            <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 md:mb-10 text-center relative pb-4 section-title-underline">Upcoming Edition: SWIM 2025</h2>
+            <div class="p-6 md:p-8 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-xl shadow-lg border border-indigo-200 text-center animate-pulse-light mb-8">
+                <p class="text-lg md:text-xl font-medium text-gray-800 mb-4">
+                    The next edition of the SWIM@KSoM is scheduled to take place from <strong class="text-indigo-700">May 5, 2025</strong> to <strong class="text-indigo-700">May 30, 2025</strong> at the Thavakkara campus of Kannur University.
+                </p>
+                <p class="text-base md:text-lg text-gray-700 mb-6">
+                    Detailed information about the speakers, schedule, syllabus, and application process for SWIM@KSoM 2025 can be found in <a href="https://swim-ksom.github.io/2025" class="text-indigo-600 hover:text-indigo-800 underline font-medium">this website</a>.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgaSQsW_IKfV3s1ANZNLUakxxOL8BGUzwoj77PCj5Ye9zHZg/viewform" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out text-base md:text-lg">
+                    Click Here to Apply
+                </a>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 space-y-4 mt-8">
+                 <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4 text-center">Selection Process & Logistics</h3>
+                 <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                     Selection to the workshop will be determined by evaluating your academic performance in your undergraduate program, Class 12 marks, and official recommendation letters from your department head.
                  </p>
-                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgaSQsW_IKfV3s1ANZNLUakxxOL8BGUzwoj77PCj5Ye9zHZg/viewform" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out text-base md:text-lg">
-                     Click Here to Apply
-                 </a>
-             </div>
-         </section>
+                 <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                     Applications must be submitted exclusively through the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgaSQsW_IKfV3s1ANZNLUakxxOL8BGUzwoj77PCj5Ye9zHZg/viewform" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 underline font-medium">online portal provided</a> to be considered for SWIM@KSoM 2025. Shortlisted candidates will receive formal confirmation via email.
+                 </p>
+                 <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                     Complimentary meals and on-campus accommodation at Kannur University’s Thavakkara campus will be arranged for all selected participants.
+                 </p>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 mt-8">
+                 <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4 text-center">Selected Candidates</h3>
+                 <p class="text-center text-gray-600 text-base md:text-lg italic">
+                     Will be updated after the selection is complete.
+                 </p>
+                 </div>
+
+        </section>
 
     </main>
 
     <div id="footer-placeholder">
-    </div>
+        </div>
 
     <script>
         // Function to fetch and insert HTML content from external files
@@ -69,6 +111,7 @@
             // Ensure the placeholder element exists
             if (!placeholder) {
                 console.error(`Placeholder element with ID '${placeholderId}' not found.`);
+                // Avoid modifying placeholder if it doesn't exist
                 return; // Exit if placeholder is missing
             }
 
@@ -77,7 +120,7 @@
                 .then(response => {
                     // Check if the request was successful
                     if (!response.ok) {
-                        throw new Error(`Network response was not ok for ${url}: ${response.statusText}`);
+                        throw new Error(`Network response was not ok for ${url}: ${response.statusText} (${response.status})`);
                     }
                     return response.text(); // Get the response body as text
                 })
@@ -86,33 +129,32 @@
                     placeholder.innerHTML = html;
 
                     // Find and re-evaluate any scripts within the inserted HTML
-                    // This is necessary for scripts like the dynamic year update in the footer
                     const scripts = placeholder.querySelectorAll("script");
                     scripts.forEach(script => {
-                        // Avoid re-running external scripts like Tailwind if accidentally included
+                        // Avoid re-running external scripts like Tailwind or MathJax
                         if (script.src && (script.src.includes('cdn.tailwindcss.com') || script.src.includes('mathjax'))) return;
 
                         const newScript = document.createElement("script");
-                        // Copy attributes (like src, async, defer, type) from the original script
+                        // Copy attributes
                         script.getAttributeNames().forEach(name => newScript.setAttribute(name, script.getAttribute(name)));
-
-                        // If it's an inline script, copy its content
+                        // Copy inline content
                         if (!script.src) {
                             newScript.textContent = script.textContent;
                         }
-
-                        // Append the new script to the body to execute it, then remove it
-                        document.body.appendChild(newScript).parentNode.removeChild(newScript);
+                        // Append to head for execution
+                        document.head.appendChild(newScript);
+                        // Optionally remove the original script from the placeholder
+                        // script.remove();
                     });
                 })
                 .catch(error => {
-                    // Log errors and display an error message in the placeholder
+                    // Log errors and display an error message
                     console.error(`Error fetching or processing ${url}:`, error);
-                    placeholder.innerHTML = `<p class="text-red-500 text-center py-5">Error loading content from ${url}.</p>`;
+                    placeholder.innerHTML = `<p class="text-red-500 text-center py-5">Error loading content from ${url}. Check path/network.</p>`;
                 });
         }
 
-        // Execute the fetch operations after the main DOM content is loaded
+        // Execute the fetch operations after the DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
             fetchAndInsert('header.html', 'header-placeholder'); // Load header
             fetchAndInsert('footer.html', 'footer-placeholder'); // Load footer
