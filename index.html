@@ -349,20 +349,24 @@
             fetchAndInsert('header.html', 'header-placeholder'); // Load header
             fetchAndInsert('footer.html', 'footer-placeholder'); // Load footer
 
-            // Get the element where the date will be displayed
+            // Get the element where the date and time will be displayed
             const lastUpdatedElement = document.getElementById('last-updated-date');
 
             // Check if the element exists
             if (lastUpdatedElement) {
-                // Get the current date
-                const today = new Date();
+                // Get the current date and time
+                const now = new Date();
 
                 // Format the date (e.g., May 1, 2025)
-                const options = { year: 'numeric', month: 'long', day: 'numeric' };
-                const formattedDate = today.toLocaleDateString(undefined, options);
+                const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+                const formattedDate = now.toLocaleDateString(undefined, dateOptions);
+
+                // Format the time (e.g., 6:12:00 PM)
+                const timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+                const formattedTime = now.toLocaleTimeString(undefined, timeOptions);
 
                 // Update the text content of the element
-                lastUpdatedElement.textContent = `Last updated on ${formattedDate}`;
+                lastUpdatedElement.textContent = `Last updated on ${formattedDate} at ${formattedTime}`;
             }
         });
     </script>
