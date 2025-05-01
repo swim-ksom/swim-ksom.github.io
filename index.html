@@ -287,7 +287,7 @@
         </section>
 
          <div class="text-center text-gray-500 text-sm mt-8">
-            <p>Last updated on May 1, 2025</p>
+            <p id="last-updated-date">Last updated on </p>
         </div>
         </main>
 
@@ -348,9 +348,24 @@
         document.addEventListener('DOMContentLoaded', function() {
             fetchAndInsert('header.html', 'header-placeholder'); // Load header
             fetchAndInsert('footer.html', 'footer-placeholder'); // Load footer
+
+            // Get the element where the date will be displayed
+            const lastUpdatedElement = document.getElementById('last-updated-date');
+
+            // Check if the element exists
+            if (lastUpdatedElement) {
+                // Get the current date
+                const today = new Date();
+
+                // Format the date (e.g., May 1, 2025)
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                const formattedDate = today.toLocaleDateString(undefined, options);
+
+                // Update the text content of the element
+                lastUpdatedElement.textContent = `Last updated on ${formattedDate}`;
+            }
         });
     </script>
 
 </body>
 </html>
-
