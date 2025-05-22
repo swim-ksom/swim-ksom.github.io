@@ -1,0 +1,17 @@
+<footer style="background-color: #f0f0f0; text-align: center; padding: 20px; margin-top: 20px; border-top: 1px solid #ddd; border-radius: 8px;">
+    <div style="max-width: 1000px; margin: 0 auto; padding: 0 10px;">
+        <p style="color: #666; font-size: 0.9em;">
+            &copy; <span id="current-year"></span> Kerala School of Mathematics. All rights reserved.
+        </p>
+        <p style="color: #888; font-size: 0.8em; margin-top: 5px;">
+            Kozhikode, Kerala, India
+        </p>
+    </div>
+    <script>
+      // Check if this script part is running inside the main document
+      // to avoid errors.
+      if (document.getElementById('current-year')) {
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+      }
+    </script>
+</footer>
