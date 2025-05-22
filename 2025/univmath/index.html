@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWIM@KSoM - University Mathematics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                packages: ['base', 'ams']
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',
+                processHtmlClass: 'tex2jax_process'
+            },
+            loader: {
+                load: ['[tex]/ams']
+            }
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-indigo-50 min-h-screen pt-16 font-sans text-gray-800">
+    <header id="header"></header>
+
+    <div class="container mx-auto px-4 py-8 md:px-6 md:py-12 lg:px-8 lg:py-16 max-w-6xl">
+
+       <section id="universtiymathematics-instructors-box" class="mb-12 md:mb-16 bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 md:mb-10 text-center relative pb-4 section-title-underline">Introduction to University Mathematics Instructors</h2>
+            <div class="flex justify-center">
+             <div class="text-center w-full max-w-sm">
+                 <span class="text-gray-600 text-base md:text-lg leading-relaxed">
+                     E.K. Narayanan (IISc Bengaluru)<br>
+                     Krishna Hanumanthu (CMI)
+                 </span>
+             </div>
+            </div>
+        </section>
+          <section id="universtiymathematics-instructors-box" class="mb-12 md:mb-16 bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+ 
+            <h3 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 md:mb-10 text-center relative pb-4 section-title-underline">Teaching Assistants</h3>
+            <div class="flex justify-center">
+            <div class="text-center w-full max-w-sm">
+               <span class="text-gray-600 text-base md:text-lg leading-relaxed">
+                   Renjith T. (ISI Bangalore)<br>
+                   Gobinda Sau (ISI Bangalore)
+               </span>
+            </div>
+            </div>
+         </section>
+
+
+         <section id="analysis-description-box" class="mb-12 md:mb-16 bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+             <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 md:mb-10 text-center relative pb-4 section-title-underline">Introduction to University Mathematics</h2>
+             <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                 This course, "Introduction to University Mathematics," offers a foundational exploration of essential mathematical concepts, starting with natural numbers, induction, and set theory, before building the number system from integers and rationals to the formal construction of real numbers. It introduces key ideas like relations, functions, and mathematical logic, concluding with a deep dive into the Axiom of Completeness and its significant implications for the properties of the real number line, ultimately aiming to establish a rigorous understanding of the fundamental structures and logic necessary for higher-level mathematics.
+             </p>
+         </section>
+
+
+
+         <section id="schedule" class="mb-12 md:mb-16">
+             <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 md:mb-10 text-center relative pb-4 section-title-underline">Introduction to University Mathematics Lecture Schedule & Resources</h2>
+             <div class="overflow-x-auto bg-white rounded-xl shadow-lg border border-gray-200">
+                 <table class="w-full min-w-[600px] text-left text-sm md:text-base">
+                     <thead class="bg-indigo-600 text-white uppercase tracking-wider">
+                         <tr>
+                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                 Lecture
+                             </th>
+                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                 Topics Covered
+                             </th>
+                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                 Speaker
+                             </th>
+                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                 Resources (Notes/Problems)
+                             </th>
+                         </tr>
+                     </thead>
+                     <tbody class="divide-y divide-gray-200">
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top">Lecture 1<br><span class="text-gray-500 text-xs font-normal">May 5 (Mon)</span></td>
+                             <td class="px-6 py-4 whitespace-wrap text-sm text-gray-700 align-top">Building the Number System: Integers, Rationals, and Their Gaps (arithmetic, algebraic properties, gaps). Constructing the Real Numbers (formal construction, filling the gaps, complete ordered field).</td>
+                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 align-top">E K Narayanan<br> TA: Renjith T. </td>
+                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 align-top"><a href="problem_sheets/1_naru.pdf" target="_blank" class="text-indigo-600 hover:underline">Problem Sheet</a></td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top">Lecture 2<br><span class="text-gray-500 text-xs font-normal">May 5 (Mon)</span></td>
+                             <td class="px-6 py-4 whitespace-wrap text-sm text-gray-700 align-top">The Natural Numbers, Induction, and Sets (including operations and cardinality).</td>
+                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 align-top">Krishna Hanumanthu <br> TA: Gobinda Sau </td>
+                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 align-top"><a href="problem_sheets/2_krishna.pdf" target="_blank" class="text-indigo-600 hover:underline">Problem Sheet</a></td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top">Lecture 3<br><span class="text-gray-500 text-xs font-normal">May 6 (Tue)</span></td>
+                             <td class="px-6 py-4 whitespace-wrap text-sm text-gray-700 align-top">Relations, Functions, and Logic (relations, functions, mathematical logic, logical statements, connectives, quantifiers).</td>
+                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 align-top">Krishna Hanumanthu<br> TA: Gobinda Sau </td>
+                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 align-top"><a href="problem_sheets/4_krishna.pdf" target="_blank" class="text-indigo-600 hover:underline">Problem Sheet</a></td>
+                         </tr>
+                         <tr class="hover:bg-gray-50 transition-colors duration-200">
+                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top">Lecture 4<br><span class="text-gray-500 text-xs font-normal">May 6 (Tue)</span></td>
+                             <td class="px-6 py-4 whitespace-wrap text-sm text-gray-700 align-top">Axiom of Completeness: The Least Upper Bound Property, existence of square roots, density of rationals and irrationals in $\textbf{R}$.</td>
+                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 align-top">E K Narayanan<br> TA: Renjith T. </td>
+                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 align-top"><a href="problem_sheets/3_naru.pdf" target="_blank" class="text-indigo-600 hover:underline">Problem Sheet</a></td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </div>
+         </section>
+
+        <!-- <p id="last-updated" class="text-center text-gray-500 text-sm mt-8"></p> -->
+
+     </div>
+
+    <footer id="footer"></footer>
+
+    <script>
+        // Fetch and insert header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // Fetch and insert footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+        // Update the last updated timestamp
+        document.addEventListener('DOMContentLoaded', function() {
+            const lastUpdatedElement = document.getElementById('last-updated');
+            if (lastUpdatedElement) {
+                const now = new Date();
+                // Options for formatting the date and time without timezone
+                const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+                const formattedDate = now.toLocaleDateString('en-US', options);
+                lastUpdatedElement.textContent = `Last updated on: ${formattedDate}`;
+            }
+        });
+    </script>
+</body>
+</html>
+
