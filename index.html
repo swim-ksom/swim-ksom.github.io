@@ -32,11 +32,9 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-indigo-50 min-h-screen flex flex-col">
+<body class="bg-gradient-to-br from-gray-50 to-indigo-50 min-h-screen pt-16">
 
-    <div id="header-placeholder">
-        <div class="text-center p-10 text-gray-500">Loading header and navigation...</div>
-    </div>
+    <header id="header"></header>
 
     <main class="container mx-auto px-4 pt-8 pb-8 md:px-6 md:pt-12 md:pb-12 lg:px-8 lg:pt-16 lg:pb-16 max-w-4xl flex-grow">
 
@@ -90,84 +88,34 @@
          <!--<div class="text-center text-gray-500 text-sm mt-8">
             <p id="last-updated-date">Last updated on </p>
         </div> -->
-        </main>
+    </main>
 
-    <div id="footer-placeholder">
-    </div>
+    <footer id="footer"></footer>
 
     <script>
-        // Function to fetch and insert HTML content from external files
-        function fetchAndInsert(url, placeholderId) {
-            const placeholder = document.getElementById(placeholderId);
-            // Ensure the placeholder element exists
-            if (!placeholder) {
-                console.error(`Placeholder element with ID '${placeholderId}' not found.`);
-                // Avoid modifying placeholder if it doesn't exist
-                return; // Exit if placeholder is missing
-            }
+        // Fetch and insert header
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
 
-            // Fetch the content from the specified URL
-            fetch(url)
-                .then(response => {
-                    // Check if the request was successful
-                    if (!response.ok) {
-                        throw new Error(`Network response was not ok for ${url}: ${response.statusText} (${response.status})`);
-                    }
-                    return response.text(); // Get the response body as text
-                })
-                .then(html => {
-                    // Insert the fetched HTML into the placeholder
-                    placeholder.innerHTML = html;
+        // Fetch and insert footer
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
 
-                    // Find and re-evaluate any scripts within the inserted HTML
-                    const scripts = placeholder.querySelectorAll("script");
-                    scripts.forEach(script => {
-                        // Avoid re-running external scripts like Tailwind or MathJax
-                        if (script.src && (script.src.includes('cdn.tailwindcss.com') || script.src.includes('mathjax'))) return;
-
-                        const newScript = document.createElement("script");
-                        // Copy attributes
-                        script.getAttributeNames().forEach(name => newScript.setAttribute(name, script.getAttribute(name)));
-                        // Copy inline content
-                        if (!script.src) {
-                            newScript.textContent = script.textContent;
-                        }
-                        // Append to head for execution
-                        document.head.appendChild(newScript);
-                        // Optionally remove the original script from the placeholder
-                        // script.remove();
-                    });
-                })
-                .catch(error => {
-                    // Log errors and display an error message
-                    console.error(`Error fetching or processing ${url}:`, error);
-                    placeholder.innerHTML = `<p class="text-red-500 text-center py-5">Error loading content from ${url}. Check path/network.</p>`;
-                });
-        }
-
-        // Execute the fetch operations after the DOM is loaded
+        // Update the last updated timestamp
         document.addEventListener('DOMContentLoaded', function() {
-            fetchAndInsert('header.html', 'header-placeholder'); // Load header
-            fetchAndInsert('footer.html', 'footer-placeholder'); // Load footer
-
-            // Get the element where the date and time will be displayed
-            const lastUpdatedElement = document.getElementById('last-updated-date');
-
-            // Check if the element exists
+            const lastUpdatedElement = document.getElementById('last-updated');
             if (lastUpdatedElement) {
-                // Get the current date and time
                 const now = new Date();
-
-                // Format the date (e.g., May 1, 2025)
-                const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-                const formattedDate = now.toLocaleDateString(undefined, dateOptions);
-
-                // Format the time (e.g., 6:12:00 PM)
-                const timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
-                const formattedTime = now.toLocaleTimeString(undefined, timeOptions);
-
-                // Update the text content of the element
-                lastUpdatedElement.textContent = `Last updated on ${formattedDate} at ${formattedTime}`;
+                // Options for formatting the date and time without timezone
+                const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+                const formattedDate = now.toLocaleDateString('en-US', options);
+                lastUpdatedElement.textContent = `Last updated on: ${formattedDate}`;
             }
         });
     </script>
