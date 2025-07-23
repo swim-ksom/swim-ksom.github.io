@@ -1,35 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIM@KSoM - Algebra</title>
+    <title>SWIM@KSoM - Summer Workshop in Mathematics</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="/style.css">
-
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true,
-                packages: ['base', 'ams']
-            },
-            options: {
-                ignoreHtmlClass: 'tex2jax_ignore',
-                processHtmlClass: 'tex2jax_process'
-            },
-            loader: {
-                load: ['[tex]/ams']
-            }
-        };
-    </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-indigo-50 min-h-screen pt-16 font-sans text-gray-800">
     <header id="header"></header>
@@ -172,32 +152,6 @@
 
     <footer id="footer"></footer>
 
-    <script>
-        // Fetch and insert header
-        fetch('/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            });
-
-        // Fetch and insert footer
-        fetch('/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-
-        // Update the last updated timestamp
-        document.addEventListener('DOMContentLoaded', function() {
-            const lastUpdatedElement = document.getElementById('last-updated');
-            if (lastUpdatedElement) {
-                const now = new Date();
-                // Options for formatting the date and time
-                const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-                const formattedDate = now.toLocaleDateString('en-US', options);
-                lastUpdatedElement.textContent = `Last updated on: ${formattedDate}`;
-            }
-        });
-    </script>
+    <script src="/script.js"></script>
 </body>
 </html>
