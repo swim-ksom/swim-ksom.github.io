@@ -1,16 +1,26 @@
- // Fetch and insert header
-fetch('/header.html')
+// Determine the base URL dynamically based on where script.js is loaded from
+const currentScript = document.currentScript;
+let baseUrl = '/';
+if (currentScript && currentScript.src) {
+    baseUrl = new URL('.', currentScript.src).href;
+}
+
+// Fetch and insert header
+fetch(baseUrl + 'header.html')
     .then(response => response.text())
     .then(data => {
-        document.getElementById('header').innerHTML = data;
+        const headerEl = document.getElementById('header');
+        if (headerEl) headerEl.innerHTML = data;
     });
 
 // Fetch and insert footer
-fetch('/footer.html')
+fetch(baseUrl + 'footer.html')
     .then(response => response.text())
     .then(data => {
-        document.getElementById('footer').innerHTML = data;
+        const footerEl = document.getElementById('footer');
+        if (footerEl) footerEl.innerHTML = data;
     });
+
 
 // Update the last updated timestamp
 document.addEventListener('DOMContentLoaded', function() {
