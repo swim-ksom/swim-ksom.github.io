@@ -41,7 +41,33 @@
     </header>
 
     <main class="flex-grow w-full{{ ' pt-12 pb-20' if is_edition_page else '' }}">
+        {% if edition %}
+        <div class="container mx-auto px-4 md:px-8 max-w-5xl mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold font-playfair text-slate-900 border-l-8 border-indigo-600 pl-6 py-2">
+                SWIM {{ edition }}
+            </h1>
+        </div>
+        {% endif %}
+
         {{ content | safe }}
+
+        {% if edition %}
+        <div class="container mx-auto px-4 md:px-8 max-w-5xl mt-20">
+            <section class="border-t border-slate-200 pt-12 pb-8">
+                <div class="text-center text-slate-500 font-light text-lg">
+                    Organized by 
+                    {% if edition == 2025 %}
+                        <a href="https://pranavharidas.github.io" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium transition-colors">Pranav Haridas</a>, KSoM and 
+                        <a href="https://vpanoop.github.io" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium transition-colors">Anoop V P</a>, Kannur University.
+                    {% elif edition == 2026 %}
+                        <a href="https://vpanoop.github.io" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium transition-colors">Anoop V P</a>, Kannur University, 
+                        <a href="https://pranav.ksom.res.in" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium transition-colors">Pranav Haridas</a>, KSoM and 
+                        <a href="https://t-renjith.github.io" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium transition-colors">Renjith T</a>, Govt. College Kasaragod.
+                    {% endif %}
+                </div>
+            </section>
+        </div>
+        {% endif %}
     </main>
 
     {% include "components/footer.njk" %}

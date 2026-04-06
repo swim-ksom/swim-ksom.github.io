@@ -12,16 +12,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/style.css");
   eleventyConfig.addPassthroughCopy("src/script.js");
   
-  // Also passthrough syllabus details if they exist
-  eleventyConfig.addPassthroughCopy("src/2025/algebra");
-  eleventyConfig.addPassthroughCopy("src/2025/analysis");
-  eleventyConfig.addPassthroughCopy("src/2025/linear_algebra");
-  eleventyConfig.addPassthroughCopy("src/2025/univmath");
-  
-  eleventyConfig.addPassthroughCopy("src/2026/algebra");
-  eleventyConfig.addPassthroughCopy("src/2026/analysis");
-  eleventyConfig.addPassthroughCopy("src/2026/linear_algebra");
-  eleventyConfig.addPassthroughCopy("src/2026/univmath");
+  eleventyConfig.addPassthroughCopy("src/**/*.pdf");
+  eleventyConfig.addPassthroughCopy("src/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("src/**/*.png");
+  eleventyConfig.addPassthroughCopy("src/**/*.jpeg");
 
   // Prevent 11ty from building individual pages for data markdown, but still watch them for changes
   eleventyConfig.ignores.add("src/**/*.md");

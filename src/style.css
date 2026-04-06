@@ -220,54 +220,29 @@
 }
 
 /* Markdown Specific Component Styles */
-.markdown-speakers > ul {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 2rem;
-    list-style: none;
-    padding: 0;
+.markdown-speakers ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #475569;
+    columns: 1;
 }
 @media (min-width: 768px) {
-    .markdown-speakers > ul {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    .markdown-speakers ul {
+        columns: 2;
+        column-gap: 2rem;
     }
 }
-.markdown-speakers > ul > li {
-    padding: 2rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 0.75rem;
-    background-color: #f8fafc;
-    transition: background-color 0.2s;
-}
-.markdown-speakers > ul > li:hover {
-    background-color: #f1f5f9;
-}
-.markdown-speakers > ul > li a {
-    transition: color 0.2s;
-}
-.markdown-speakers > ul > li a:hover {
-    color: #4f46e5;
-}
-.markdown-speakers > ul > li > strong {
-    display: block;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 1rem;
-    font-family: 'Playfair Display', serif;
-}
-.markdown-speakers > ul > li > ul {
-    color: #475569;
-    font-weight: 300;
-    line-height: 1.625;
-    list-style: none;
-    padding: 0;
-}
-
 .markdown-tas ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #475569;
+}
+.markdown-speakers li, .markdown-tas li {
+    padding-bottom: 0.5rem;
+    font-weight: 300;
+}
+.markdown-speakers li:last-child, .markdown-tas li:last-child {
+    padding-bottom: 0;
 }
 
 .markdown-schedule table {
@@ -290,7 +265,62 @@
 .markdown-schedule th {
     text-align: center;
 }
-.markdown-schedule tbody tr:hover td {
+
+/* Participants Table Styles */
+.markdown-participants h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.markdown-participants table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.markdown-participants thead {
     background-color: #f8fafc;
-    transition: background-color 0.2s;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.markdown-participants th {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #334155;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.markdown-participants td {
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    color: #374151;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.markdown-participants tr:last-child td {
+    border-bottom: none;
+}
+
+.markdown-participants code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.875rem;
+    color: #475569;
+}
+
+.markdown-participants tr:hover {
+    background-color: #f9fafb;
+    transition: background-color 0.2s ease;
 }

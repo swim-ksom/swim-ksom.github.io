@@ -1,9 +1,8 @@
-- **[Analysis](analysis/)**
-  - Anoop T V (IIT Madras)
-  - K S Senthil Rani (IISER Berhampur)
-- **[Algebra](algebra/)**
-  - Tulsi Srinivasan (APU Bengaluru)
-  - R. Venkatesh (IISc Bengaluru)
-- **[Linear Algebra](linear_algebra/)**
-  - K N Raghavan (Krea University)
-  - Divakaran D. (APU, Bengaluru)
+- Anoop T V (IIT Madras)
+- K S Senthil Rani (IISER Berhampur)
+- Tulsi Srinivasan (APU Bengaluru)
+- R. Venkatesh (IISc Bengaluru)
+- K N Raghavan (Krea University)
+- Divakaran D. (APU, Bengaluru)
+- E.K. Narayanan (IISc Bengaluru)
+- Krishna Hanumanthu (CMI)
