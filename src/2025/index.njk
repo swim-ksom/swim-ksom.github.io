@@ -1,40 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIM@KSoM 2025 - Summer Workshop in Mathematics</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        playfair: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <!-- Local CSS -->
-    <link rel="stylesheet" href="../style.css">
-    <!-- MathJax -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-
-<body class="bg-white min-h-screen flex flex-col antialiased text-slate-800 selection:bg-indigo-100 selection:text-indigo-900">
-
-    <header id="header" class="relative z-50 bg-white border-b border-slate-200"></header>
-
-    <main class="flex-grow w-full pt-12 pb-20">
+---
+layout: layouts/base.njk
+title: SWIM@KSoM 2025 - Summer Workshop in Mathematics
+is_edition_page: true
+---
         <div class="container mx-auto px-4 md:px-8 max-w-5xl">
             
             <!-- ABOUT SECTION -->
@@ -58,40 +26,9 @@
                 <h2 class="text-2xl md:text-3xl font-bold font-playfair text-slate-900 mb-8">
                     List of Speakers
                 </h2>
-                <ul class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <li class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
-                        <strong class="block text-xl font-bold text-slate-900 mb-4 font-playfair">
-                            <a href="analysis/" class="hover:text-indigo-600 transition-colors">Analysis</a>
-                        </strong>
-                        <span class="text-slate-600 font-light leading-relaxed block">
-                            E.K. Narayanan (IISc Bengaluru)<br>
-                            Jayanthan A.J. (KSoM Kozhikode)<br>
-                            Sanjay P. K. (NIT Calicut)<br>
-                            Manjunath Krishnapur (IISc Bengaluru)
-                        </span>
-                    </li>
-                    <li class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
-                        <strong class="block text-xl font-bold text-slate-900 mb-4 font-playfair">
-                            <a href="algebra/" class="hover:text-indigo-600 transition-colors">Algebra</a>
-                        </strong>
-                        <span class="text-slate-600 font-light leading-relaxed block">
-                            U.K. Anandavardhanan (IIT Bombay)<br>
-                            K.N. Raghavan (Krea University)<br>
-                            R. Venkatesh (IISc Bengaluru)<br>
-                        </span>
-                    </li>
-                    <li class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
-                        <strong class="block text-xl font-bold text-slate-900 mb-4 font-playfair">
-                            <a href="linear_algebra/" class="hover:text-indigo-600 transition-colors">Linear Algebra</a>
-                        </strong>
-                        <span class="text-slate-600 font-light leading-relaxed block">
-                            Krishna Hanumanthu (CMI)<br>
-                            Sruthymurali (Kannur University)<br>
-                            A. K. Vijayarajan (KSoM Kozhikode)<br>
-                            Divakaran D. (APU, Bengaluru)
-                        </span>
-                    </li>
-                </ul>
+                <div class="markdown-speakers">
+                    {% renderMarkdown "src/2025/data/speakers.md" %}
+                </div>
             </section>
 
             <!-- TAs SECTION -->
@@ -99,12 +36,8 @@
                 <h2 class="text-2xl md:text-3xl font-bold font-playfair text-slate-900 mb-8">
                     List of Teaching Assistants
                 </h2>
-                <div class="p-8 border border-slate-200 rounded-xl bg-slate-50 md:max-w-md">
-                    <span class="text-slate-600 font-light leading-relaxed block">
-                        Renjith T. (ISI Bangalore)<br>
-                        Deepak Dileep (TIFR CAM Bangalore)<br>
-                        Gobinda Sau (ISI Bangalore)
-                    </span>
+                <div class="p-8 border border-slate-200 rounded-xl bg-slate-50 md:max-w-md markdown-tas text-slate-600 font-light leading-relaxed">
+                    {% renderMarkdown "src/2025/data/tas.md" %}
                 </div>
             </section>
 
@@ -789,11 +722,4 @@
             </section>
 
         </div>
-    </main>
-
-    <footer id="footer" class="relative z-50 bg-white border-t border-slate-200"></footer>
-
-    <script src="../script.js"></script>
-
-</body>
-</html>
+        </div>

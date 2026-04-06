@@ -218,3 +218,79 @@
     body { background: white; color: black; }
     .no-print { display: none; }
 }
+
+/* Markdown Specific Component Styles */
+.markdown-speakers > ul {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+@media (min-width: 768px) {
+    .markdown-speakers > ul {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+.markdown-speakers > ul > li {
+    padding: 2rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    background-color: #f8fafc;
+    transition: background-color 0.2s;
+}
+.markdown-speakers > ul > li:hover {
+    background-color: #f1f5f9;
+}
+.markdown-speakers > ul > li a {
+    transition: color 0.2s;
+}
+.markdown-speakers > ul > li a:hover {
+    color: #4f46e5;
+}
+.markdown-speakers > ul > li > strong {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+.markdown-speakers > ul > li > ul {
+    color: #475569;
+    font-weight: 300;
+    line-height: 1.625;
+    list-style: none;
+    padding: 0;
+}
+
+.markdown-tas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.markdown-schedule table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+.markdown-schedule thead {
+    background-color: #f8fafc;
+    color: #334155;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.markdown-schedule th, .markdown-schedule td {
+    padding: 1rem 1.25rem;
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+.markdown-schedule th {
+    text-align: center;
+}
+.markdown-schedule tbody tr:hover td {
+    background-color: #f8fafc;
+    transition: background-color 0.2s;
+}

@@ -1,0 +1,61 @@
+const markdownIt = require("markdown-it");
+
+module.exports = function(eleventyConfig) {
+  // Let eleventy know what formats we expect
+  eleventyConfig.setTemplateFormats([
+    "md",
+    "njk",
+    "html"
+  ]);
+
+  // Passthrough copy for CSS, JS, and directories not processed by 11ty
+  eleventyConfig.addPassthroughCopy("src/style.css");
+  eleventyConfig.addPassthroughCopy("src/script.js");
+  
+  // Also passthrough syllabus details if they exist
+  eleventyConfig.addPassthroughCopy("src/2025/algebra");
+  eleventyConfig.addPassthroughCopy("src/2025/analysis");
+  eleventyConfig.addPassthroughCopy("src/2025/linear_algebra");
+  eleventyConfig.addPassthroughCopy("src/2025/univmath");
+  
+  eleventyConfig.addPassthroughCopy("src/2026/algebra");
+  eleventyConfig.addPassthroughCopy("src/2026/analysis");
+  eleventyConfig.addPassthroughCopy("src/2026/linear_algebra");
+  eleventyConfig.addPassthroughCopy("src/2026/univmath");
+
+  // Prevent 11ty from building individual pages for data markdown, but still watch them for changes
+  eleventyConfig.ignores.add("src/**/*.md");
+  eleventyConfig.addWatchTarget("src/**/*.md");
+
+  // Setup markdown-it to allow classes, etc. 
+  let mdOptions = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+  let markdownLib = markdownIt(mdOptions);
+  eleventyConfig.setLibrary("md", markdownLib);
+  
+  // Custom filter to render markdown inside njk tags
+  eleventyConfig.addFilter("markdown", (content) => {
+    return markdownLib.render(content);
+  });
+
+  const fs = require("fs");
+  eleventyConfig.addShortcode("renderMarkdown", function(filePath) {
+    const content = fs.readFileSync(filePath, 'utf8');
+    return markdownLib.render(content);
+  });
+
+  return {
+    dir: {
+      input: "src",
+      output: "_site",
+      includes: "_includes",
+      data: "_data"
+    },
+    passthroughFileCopy: true,
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk"
+  };
+};
