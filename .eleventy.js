@@ -8,9 +8,11 @@ module.exports = function(eleventyConfig) {
     "html"
   ]);
 
-  // Passthrough copy for CSS, JS, and directories not processed by 11ty
+  // Passthrough copy for CSS, JS, and global config files
   eleventyConfig.addPassthroughCopy("src/style.css");
   eleventyConfig.addPassthroughCopy("src/script.js");
+  eleventyConfig.addPassthroughCopy("src/CNAME");
+  eleventyConfig.addPassthroughCopy("src/.nojekyll");
   
   eleventyConfig.addPassthroughCopy("src/**/*.pdf");
   eleventyConfig.addPassthroughCopy("src/**/*.jpg");
