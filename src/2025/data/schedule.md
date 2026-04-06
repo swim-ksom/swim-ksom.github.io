@@ -1,4 +1,4 @@
-| Date | Morning Session <br> (09:30 - 1:00) | Afternoon Session <br> (2:00 - 5:15) |
+| Date | Morning Session | Afternoon Session |
 | :--- | :--- | :--- |
 | May 5 (Mon) | Intro to Univ Math <br> E K Narayanan - Renjith T. | Intro to Univ Math <br> Krishna Hanumanthu - Gobinda Sau |
 | May 6 (Tue) | Intro to Univ Math <br> E K Narayanan - Renjith T. | Intro to Univ Math <br> Krishna Hanumanthu - Gobinda Sau |

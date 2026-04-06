@@ -1,4 +1,4 @@
-- Anoop T V (IIT Madras)
+- Jotsaroop Kaur (IISER Mohali)
 - K S Senthil Rani (IISER Berhampur)
 - Tulsi Srinivasan (APU Bengaluru)
 - R. Venkatesh (IISc Bengaluru)
