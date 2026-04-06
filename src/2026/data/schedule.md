@@ -1,7 +1,7 @@
 | Date | Morning Session | Afternoon Session |
 | :--- | :--- | :--- |
-| May 4 (Mon) | Intro to Univ Math <br> Krishna Hanumanthu &ndash; TA | Intro to Univ Math <br> Instructor &ndash; TA |
-| May 5 (Tue) | Intro to Univ Math <br> Krishna Hanumanthu &ndash; TA | Intro to Univ Math <br> Instructor &ndash; TA |
+| May 4 (Mon) | Intro to Univ Math <br> Krishna Hanumanthu &ndash; TA | Intro to Univ Math <br> Jotsaroop Kaur &ndash; TA |
+| May 5 (Tue) | Intro to Univ Math <br> Krishna Hanumanthu &ndash; TA | Intro to Univ Math <br> Jotsaroop Kaur &ndash; TA |
 | May 6 (Wed) | Analysis <br> Instructor &ndash; TA | Algebra <br> Krishna Hanumanthu &ndash; TA |
 | May 7 (Thu) | Linear Algebra <br> K. N. Raghavan &ndash; TA | Analysis <br> Instructor &ndash; TA |
 | May 8 (Fri) | Algebra <br> Krishna Hanumanthu &ndash; TA | Linear Algebra <br> K. N. Raghavan &ndash; TA |
