@@ -265,6 +265,16 @@
 .markdown-schedule th {
     text-align: center;
 }
+.schedule-week-row td {
+    background-color: #f1f5f9; /* slate-100 */
+    color: #0f172a; /* slate-900 */
+    font-weight: 700;
+    text-align: center !important;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    padding: 0.75rem !important;
+    border-right: none !important;
+}
 
 /* Participants Table Styles */
 .markdown-participants h3 {

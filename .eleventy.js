@@ -40,7 +40,17 @@ module.exports = function(eleventyConfig) {
   const fs = require("fs");
   eleventyConfig.addShortcode("renderMarkdown", function(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
-    return markdownLib.render(content);
+    let rendered = markdownLib.render(content);
+
+    // Identify rows starting with 'Week' in schedule.md and merge columns
+    if (filePath.includes("schedule.md")) {
+      rendered = rendered.replace(
+        /<tr[^>]*>\s*<td[^>]*>Week\s+([^<]+)<\/td>\s*<td[^>]*>\s*<\/td>\s*<td[^>]*>\s*<\/td>\s*<\/tr>/gi,
+        '<tr class="schedule-week-row"><td colspan="3">Week $1</td></tr>'
+      );
+    }
+
+    return rendered;
   });
 
   return {
