@@ -88,6 +88,10 @@ module.exports = function(eleventyConfig) {
               currentVal = val;
               rowSpanCount = 1;
               lastUniqueRowIdx = processedRows.length;
+              // Add a divider class to the first row of each week (except the very first)
+              if (i > 0) {
+                row = row.replace(/<tr([^>]*)>/i, '<tr class="week-divider" $1>');
+              }
             }
           }
           processedRows.push(row);

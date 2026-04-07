@@ -312,6 +312,10 @@
     background-color: #f8fafc;
 }
 
+.week-divider td {
+    border-top: 3px solid #cbd5e1 !important;
+}
+
 /* Participants Table Styles */
 .markdown-participants h3 {
     font-size: 1.25rem;
