@@ -251,6 +251,7 @@
 
 .markdown-schedule table {
     width: 100%;
+    min-width: 800px;
     text-align: left;
     border-collapse: collapse;
 }
@@ -265,6 +266,10 @@
     padding: 1rem 1.25rem;
     border-right: 1px solid #e2e8f0;
     border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+}
+.markdown-schedule td:first-child {
+    white-space: nowrap;
 }
 .markdown-schedule th {
     text-align: center;
@@ -283,6 +288,7 @@
 /* Generic Markdown Table Styles (Plain) */
 .markdown-table table {
     width: 100%;
+    min-width: 700px;
     text-align: left;
     border-collapse: collapse;
     background-color: #ffffff;
@@ -297,6 +303,9 @@
 .markdown-table th, .markdown-table td {
     padding: 1rem 1.25rem;
     border: 1px solid #e2e8f0;
+}
+.markdown-table td:first-child {
+    white-space: nowrap;
 }
 .markdown-table th {
     text-align: left;
@@ -315,6 +324,7 @@
 
 .markdown-participants table {
     width: 100%;
+    min-width: 900px;
     border-collapse: separate;
     border-spacing: 0;
     border: 1px solid #e2e8f0;

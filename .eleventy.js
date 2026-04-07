@@ -50,6 +50,52 @@ module.exports = function(eleventyConfig) {
       );
     }
 
+    // Process speakers.md to merge adjacent identical cells in the first column
+    if (filePath.includes("speakers.md")) {
+      const tableMatch = rendered.match(/<tbody[^>]*>([\s\S]*)<\/tbody>/i);
+      if (tableMatch) {
+        let tbody = tableMatch[1];
+        const rows = tbody.match(/<tr[^>]*>[\s\S]*?<\/tr>/gi) || [];
+        
+        let processedRows = [];
+        let currentVal = null;
+        let lastUniqueRowIdx = -1;
+        let rowSpanCount = 0;
+
+        for (let i = 0; i < rows.length; i++) {
+          let row = rows[i];
+          const tdMatch = row.match(/<td[^>]*>(.*?)<\/td>/i);
+          
+          if (tdMatch) {
+            const val = tdMatch[1].trim();
+
+            if (val === currentVal && lastUniqueRowIdx !== -1) {
+              rowSpanCount++;
+              // Remove the duplicate first cell
+              row = row.replace(/<td[^>]*>.*?<\/td>/i, '');
+              // Update the last unique cell's rowspan
+              processedRows[lastUniqueRowIdx] = processedRows[lastUniqueRowIdx].replace(
+                /<td([^>]*)>/i,
+                (match, p1) => {
+                  let attributes = p1.trim();
+                  if (attributes.includes('rowspan')) {
+                    return `<td ${attributes.replace(/rowspan="\d+"/, `rowspan="${rowSpanCount}"`)}>`;
+                  }
+                  return `<td ${attributes} rowspan="${rowSpanCount}">`;
+                }
+              );
+            } else {
+              currentVal = val;
+              rowSpanCount = 1;
+              lastUniqueRowIdx = processedRows.length;
+            }
+          }
+          processedRows.push(row);
+        }
+        rendered = rendered.replace(tbody, processedRows.join('\n'));
+      }
+    }
+
     return rendered;
   });
 
