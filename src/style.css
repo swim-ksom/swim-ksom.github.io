@@ -276,6 +276,29 @@
     border-right: none !important;
 }
 
+/* Generic Markdown Table Styles (Plain) */
+.markdown-table table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+.markdown-table thead {
+    background-color: #f8fafc;
+    color: #334155;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.markdown-table th, .markdown-table td {
+    padding: 1rem 1.25rem;
+    border: 1px solid #e2e8f0;
+}
+.markdown-table th {
+    text-align: left;
+    background-color: #f8fafc;
+}
+
 /* Participants Table Styles */
 .markdown-participants h3 {
     font-size: 1.25rem;
