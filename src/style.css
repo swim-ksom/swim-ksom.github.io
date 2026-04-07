@@ -18,6 +18,10 @@
         --focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.5);
     }
 
+    .font-roboto {
+        font-family: 'Roboto', sans-serif;
+    }
+
     /* Dark Theme */
     @media (prefers-color-scheme: dark) {
         :root {
