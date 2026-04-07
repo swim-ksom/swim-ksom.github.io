@@ -13,7 +13,8 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        playfair: ['Playfair Display', 'serif'],
+                        playfair: ['Roboto', 'sans-serif'],
+                        heading: ['Roboto', 'sans-serif'],
                     }
                 }
             }
@@ -23,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
     <!-- Local CSS -->
     <!-- Eleventy gives us absolute root path for styles when built -->
@@ -43,7 +44,7 @@
     <main class="flex-grow w-full{{ ' pt-12 pb-20' if is_edition_page else '' }}">
         {% if edition %}
         <div class="container mx-auto px-4 md:px-8 max-w-5xl mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold font-playfair text-slate-900 border-l-8 border-indigo-600 pl-6 py-2">
+            <h1 class="text-4xl md:text-5xl font-bold font-heading text-slate-900 border-l-8 border-indigo-600 pl-6 py-2">
                 SWIM {{ edition }}
             </h1>
         </div>
