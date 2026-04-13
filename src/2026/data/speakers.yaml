@@ -2,10 +2,14 @@
   dates: May 4 – May 8
   courses:
     - name: Intro to Univ Math
-      speaker: "K N Raghavan (Krea University) <br> Krishna Hanumanthu (CMI)"
-      ta: "Gobindo Sau (IIT Madras) <br> Gayathri (IMSc)"
-      short_speaker: K N Raghavan & Krishna Hanumanthu
-      short_ta: Gobindo Sau & Gayathri
+      speaker_1: K N Raghavan (Krea University)
+      speaker_2: Krishna Hanumanthu (CMI)
+      ta_1: Gobindo Sau (IIT Madras)
+      ta_2: Gayathri (IMSc)
+      short_speaker_1: K N Raghavan
+      short_speaker_2: Krishna Hanumanthu
+      short_ta_1: Gobindo Sau
+      short_ta_2: Gayathri
     - name: Algebra
       speaker: Krishna Hanumanthu (CMI)
       ta: Gayathri (IMSc)
@@ -39,7 +43,7 @@
   courses:
     - name: Analysis
       speaker: K. S. Senthil Rani (IISER Berhampur)
-      ta: Anand (IIT Madras)
+      ta: Anand (IIT Madras)*
       short_speaker: K. S. Senthil Rani
       short_ta: Anand
     - name: Algebra
@@ -56,13 +60,13 @@
   dates: May 25 – May 29
   courses:
     - name: Analysis
-      speaker: Manjunath Krishnapur (IISc Bangalore)
-      ta: Faheem (IISc Bangalore)
+      speaker: Manjunath Krishnapur (IISc Bangalore)*
+      ta: Faheem (IISc Bangalore)*
       short_speaker: Manjunath Krishnapur
       short_ta: Faheem
     - name: Algebra
       speaker: R. Venkatesh (IISc Bengaluru)
-      ta: Anand (IIT Madras)
+      ta: Anand (IIT Madras)*
       short_speaker: R. Venkatesh
       short_ta: Anand
     - name: Linear Algebra

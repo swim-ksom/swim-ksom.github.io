@@ -2,12 +2,12 @@
   label: Week 1
 - type: day
   date: May 4 (Mon)
-  morning: Intro to Univ Math
-  afternoon: Intro to Univ Math
+  morning: "Intro to Univ Math:1"
+  afternoon: "Intro to Univ Math:2"
 - type: day
   date: May 5 (Tue)
-  morning: Intro to Univ Math
-  afternoon: Intro to Univ Math
+  morning: "Intro to Univ Math:1"
+  afternoon: "Intro to Univ Math:2"
 - type: day
   date: May 6 (Wed)
   morning: Algebra

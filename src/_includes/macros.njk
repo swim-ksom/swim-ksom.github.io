@@ -1,0 +1,24 @@
+{% macro getSpeaker(courseRef, currentWeekStr, editionSpeakers) %}
+  {% if courseRef %}
+    {% set parts = courseRef.split(':') %}
+    {% set courseName = parts[0] %}
+    {% set index = parts[1] %}
+    {% set found = "" %}
+    {% for weekObj in editionSpeakers %}
+      {% if weekObj.week == currentWeekStr %}
+        {% for crs in weekObj.courses %}
+          {% if crs.name == courseName %}
+             {% if index %}
+               {% set sKey = "short_speaker_" + index %}
+               {% set tKey = "short_ta_" + index %}
+               {% set found = crs[sKey] + " &ndash; " + crs[tKey] %}
+             {% else %}
+               {% set found = crs.short_speaker + " &ndash; " + crs.short_ta %}
+             {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    {{ found | safe }}
+  {% endif %}
+{% endmacro %}

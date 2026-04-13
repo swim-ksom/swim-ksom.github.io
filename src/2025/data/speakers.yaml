@@ -2,10 +2,14 @@
   dates: May 5 – May 9
   courses:
     - name: Intro to Univ Math
-      speaker: "E.K. Narayanan (IISc Bengaluru) <br> Krishna Hanumanthu (CMI)"
-      ta: "Renjith T. (ISI Bangalore) <br> Gobinda Sau (ISI Bangalore)"
-      short_speaker: E.K. Narayanan & Krishna Hanumanthu
-      short_ta: Renjith T. & Gobinda Sau
+      speaker_1: E.K. Narayanan (IISc Bengaluru)
+      speaker_2: Krishna Hanumanthu (CMI)
+      ta_1: Renjith T. (ISI Bangalore)
+      ta_2: Gobinda Sau (ISI Bangalore)
+      short_speaker_1: E.K. Narayanan
+      short_speaker_2: Krishna Hanumanthu
+      short_ta_1: Renjith T.
+      short_ta_2: Gobinda Sau
     - name: Analysis
       speaker: E.K. Narayanan (IISc Bengaluru)
       ta: Renjith T. (ISI Bangalore)

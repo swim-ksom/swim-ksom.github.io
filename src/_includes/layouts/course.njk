@@ -1,7 +1,8 @@
 ---
 layout: layouts/base.njk
 ---
-{% set courseColor = site.colors[course_title] if site.colors[course_title] else site.colors['Default'] %}
+{% from "macros.njk" import getSpeaker %}
+{% set courseColor = site.colors[course_id] if site.colors[course_id] else site.colors['Default'] %}
 <div class="container mx-auto px-4 md:px-8 max-w-5xl">
 
     <section id="course-description-box" class="mb-20">
@@ -32,21 +33,37 @@ layout: layouts/base.njk
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">
-                    {% for lecture in lectures %}
-                    <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top">Lecture {{ loop.index }}<br><span class="text-gray-500 text-xs font-normal">{{ lecture.date }}</span></td>
-                        <td class="px-6 py-4 whitespace-wrap text-sm text-gray-700 align-top">{{ lecture.topics }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 align-top">{{ lecture.speaker | safe }} <br> TA: {{ lecture.ta }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 align-top">
-                            {% if lecture.resources and lecture.resources.length > 0 %}
-                                {% for res in lecture.resources %}
-                                    <a href="{{ res.url }}" target="_blank" class="{{ courseColor.text }} hover:underline">{{ res.title }}</a>{% if not loop.last %}<br>{% endif %}
-                                {% endfor %}
-                            {% else %}
-                                Coming Soon
+                    {% set lectureCount = [0] %}
+                    {% set currentWeekStr = "" %}
+                    {% for row in schedules %}
+                      {% if row.type == "week" %}
+                        {% set currentWeekStr = row.label %}
+                      {% else %}
+                        {% for session in [row.morning, row.afternoon] %}
+                          {% if session %}
+                            {% set sParts = session.split(':') %}
+                            {% if sParts[0] == course_id %}
+                              {% set idx = lectureCount[0] %}
+                              {% set lectureInfo = lectures[idx] %}
+                              <tr>
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top">Lecture {{ idx + 1 }}<br><span class="text-gray-500 text-xs font-normal">{{ row.date }}</span></td>
+                                  <td class="px-6 py-4 whitespace-wrap text-sm text-gray-700 align-top">{{ lectureInfo.topics }}</td>
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 align-top">{{ getSpeaker(session, currentWeekStr, speakers) }}</td>
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 align-top">
+                                      {% if lectureInfo.resources and lectureInfo.resources.length > 0 %}
+                                          {% for res in lectureInfo.resources %}
+                                              <a href="{{ res.url }}" target="_blank" class="{{ courseColor.text }} hover:underline">{{ res.title }}</a>{% if not loop.last %}<br>{% endif %}
+                                          {% endfor %}
+                                      {% else %}
+                                          Coming Soon
+                                      {% endif %}
+                                  </td>
+                              </tr>
+                              {% set _ = lectureCount.push(lectureCount.pop() + 1) %}
                             {% endif %}
-                        </td>
-                    </tr>
+                          {% endif %}
+                        {% endfor %}
+                      {% endif %}
                     {% endfor %}
                 </tbody>
             </table>

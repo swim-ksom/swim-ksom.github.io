@@ -2,34 +2,23 @@
 layout: layouts/course.njk
 title: SWIM@KSoM - Summer Workshop in Mathematics
 course_title: Introduction to University Mathematics
+course_id: Intro to Univ Math
 edition: 2025
 permalink: /2025/univmath/
 lectures:
-  - date: May 5 (Mon)
-    topics: "Building the Number System: Integers, Rationals, and Their Gaps (arithmetic, algebraic properties, gaps). Constructing the Real Numbers (formal construction, filling the gaps, complete ordered field)."
-    speaker: "E K Narayanan"
-    ta: "Renjith T."
+  - topics: "Building the Number System: Integers, Rationals, and Their Gaps (arithmetic, algebraic properties, gaps). Constructing the Real Numbers (formal construction, filling the gaps, complete ordered field)."
     resources:
       - title: "Problem Sheet"
         url: "/2025/problem_sheets/univmath/1_naru.pdf"
-  - date: May 5 (Mon)
-    topics: "The Natural Numbers, Induction, and Sets (including operations and cardinality)."
-    speaker: "Krishna Hanumanthu"
-    ta: "Gobinda Sau"
+  - topics: "The Natural Numbers, Induction, and Sets (including operations and cardinality)."
     resources:
       - title: "Problem Sheet"
         url: "/2025/problem_sheets/univmath/2_krishna.pdf"
-  - date: May 6 (Tue)
-    topics: "Relations, Functions, and Logic (relations, functions, mathematical logic, logical statements, connectives, quantifiers)."
-    speaker: "Krishna Hanumanthu"
-    ta: "Gobinda Sau"
+  - topics: "Relations, Functions, and Logic (relations, functions, mathematical logic, logical statements, connectives, quantifiers)."
     resources:
       - title: "Problem Sheet"
         url: "/2025/problem_sheets/univmath/4_krishna.pdf"
-  - date: May 6 (Tue)
-    topics: "Axiom of Completeness: The Least Upper Bound Property, existence of square roots, density of rationals and irrationals in $\\textbf{R}$."
-    speaker: "E K Narayanan"
-    ta: "Renjith T."
+  - topics: "Axiom of Completeness: The Least Upper Bound Property, existence of square roots, density of rationals and irrationals in $\textbf{R}$."
     resources:
       - title: "Problem Sheet"
         url: "/2025/problem_sheets/univmath/3_naru.pdf"
