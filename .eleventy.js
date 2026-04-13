@@ -1,6 +1,9 @@
 const markdownIt = require("markdown-it");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
   // Let eleventy know what formats we expect
   eleventyConfig.setTemplateFormats([
     "md",
@@ -14,14 +17,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/CNAME");
   eleventyConfig.addPassthroughCopy("src/.nojekyll");
   
-  eleventyConfig.addPassthroughCopy("src/**/*.pdf");
-  eleventyConfig.addPassthroughCopy("src/**/*.jpg");
-  eleventyConfig.addPassthroughCopy("src/**/*.png");
-  eleventyConfig.addPassthroughCopy("src/**/*.jpeg");
+  eleventyConfig.addPassthroughCopy("src/**/*.{pdf,jpg,png,jpeg,webp}");
 
   // Prevent 11ty from building individual pages for data markdown, but still watch them for changes
   eleventyConfig.ignores.add("src/**/data/*.md");
   eleventyConfig.addWatchTarget("src/**/*.md");
+  eleventyConfig.addWatchTarget("src/**/*.yaml");
 
   // Setup markdown-it to allow classes, etc. 
   let mdOptions = {
