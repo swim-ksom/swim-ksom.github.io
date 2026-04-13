@@ -20,7 +20,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/**/*.jpeg");
 
   // Prevent 11ty from building individual pages for data markdown, but still watch them for changes
-  eleventyConfig.ignores.add("src/**/*.md");
+  eleventyConfig.ignores.add("src/**/data/*.md");
   eleventyConfig.addWatchTarget("src/**/*.md");
 
   // Setup markdown-it to allow classes, etc. 
@@ -39,130 +39,9 @@ module.exports = function(eleventyConfig) {
 
   const fs = require("fs");
   eleventyConfig.addShortcode("renderMarkdown", function(filePath) {
+    if (!fs.existsSync(filePath)) return "";
     let content = fs.readFileSync(filePath, 'utf8');
-
-    // Dynamically inject speakers and TAs into schedule.md
-    if (filePath.includes("schedule.md")) {
-      const speakersPath = filePath.replace("schedule.md", "speakers.md");
-      let speakersData = {};
-      
-      if (fs.existsSync(speakersPath)) {
-        const speakersText = fs.readFileSync(speakersPath, 'utf8');
-        const lines = speakersText.split('\n');
-        for (let line of lines) {
-          if (line.startsWith('|') && !line.includes('---') && !line.includes('Week | Course')) {
-            const parts = line.split('|').map(s => s.trim());
-            if (parts.length >= 5) {
-              const weekRaw = parts[1];
-              const weekMatch = weekRaw.match(/Week\s+(\d+)/i);
-              const weekNum = weekMatch ? weekMatch[1] : null;
-
-              if (weekNum) {
-                let course = parts[2].replace(/\*\*/g, '').replace(/<[^>]+>/g, '').trim(); 
-                if (course === 'Intro to University Mathematics') course = 'Intro to Univ Math';
-                
-                const speakerRaw = parts[3]; 
-                const taRaw = parts[4];
-
-                // Remove affiliations like (CMI) or (IIT Bombay) and strip bold/italic markdown
-                const speaker = speakerRaw.replace(/\s*\([^)]+\)/g, '').replace(/[*_]/g, '').trim();
-                const ta = taRaw.replace(/\s*\([^)]+\)/g, '').replace(/[*_]/g, '').trim();
-
-                if (!speakersData[weekNum]) speakersData[weekNum] = {};
-                speakersData[weekNum][course] = { speaker, ta };
-              }
-            }
-          }
-        }
-
-        // Process schedule.md content line by line
-        const scheduleLines = content.split('\n');
-        let currentWeek = null;
-        for (let i = 0; i < scheduleLines.length; i++) {
-          let line = scheduleLines[i];
-          const weekMatch = line.match(/\|Week\s+(\d+)\|\|/i);
-          if (weekMatch) {
-            currentWeek = weekMatch[1];
-          } else if (currentWeek && line.startsWith('|') && !line.includes('---')) {
-            const parts = line.split('|');
-            for (let j = 2; j < parts.length - 1; j++) {
-              let cell = parts[j].trim();
-              if (cell && speakersData[currentWeek]) {
-                let courseKey = Object.keys(speakersData[currentWeek]).find(c => cell === c);
-                if (courseKey) {
-                  const { speaker, ta } = speakersData[currentWeek][courseKey];
-                  parts[j] = ` ${cell} <br> ${speaker} &ndash; ${ta} `;
-                }
-              }
-            }
-            scheduleLines[i] = parts.join('|');
-          }
-        }
-        content = scheduleLines.join('\n');
-      }
-    }
-
-    let rendered = markdownLib.render(content);
-
-    // Identify rows starting with 'Week' in schedule.md and merge columns
-    if (filePath.includes("schedule.md")) {
-      rendered = rendered.replace(
-        /<tr[^>]*>\s*<td[^>]*>Week\s+([^<]+)<\/td>\s*<td[^>]*>\s*<\/td>\s*<td[^>]*>\s*<\/td>\s*<\/tr>/gi,
-        '<tr class="schedule-week-row"><td colspan="3">Week $1</td></tr>'
-      );
-    }
-
-    // Process speakers.md to merge adjacent identical cells in the first column
-    if (filePath.includes("speakers.md")) {
-      const tableMatch = rendered.match(/<tbody[^>]*>([\s\S]*)<\/tbody>/i);
-      if (tableMatch) {
-        let tbody = tableMatch[1];
-        const rows = tbody.match(/<tr[^>]*>[\s\S]*?<\/tr>/gi) || [];
-        
-        let processedRows = [];
-        let currentVal = null;
-        let lastUniqueRowIdx = -1;
-        let rowSpanCount = 0;
-
-        for (let i = 0; i < rows.length; i++) {
-          let row = rows[i];
-          const tdMatch = row.match(/<td[^>]*>(.*?)<\/td>/i);
-          
-          if (tdMatch) {
-            const val = tdMatch[1].trim();
-
-            if (val === currentVal && lastUniqueRowIdx !== -1) {
-              rowSpanCount++;
-              // Remove the duplicate first cell
-              row = row.replace(/<td[^>]*>.*?<\/td>/i, '');
-              // Update the last unique cell's rowspan
-              processedRows[lastUniqueRowIdx] = processedRows[lastUniqueRowIdx].replace(
-                /<td([^>]*)>/i,
-                (match, p1) => {
-                  let attributes = p1.trim();
-                  if (attributes.includes('rowspan')) {
-                    return `<td ${attributes.replace(/rowspan="\d+"/, `rowspan="${rowSpanCount}"`)}>`;
-                  }
-                  return `<td ${attributes} rowspan="${rowSpanCount}">`;
-                }
-              );
-            } else {
-              currentVal = val;
-              rowSpanCount = 1;
-              lastUniqueRowIdx = processedRows.length;
-              // Add a divider class to the first row of each week (except the very first)
-              if (i > 0) {
-                row = row.replace(/<tr([^>]*)>/i, '<tr class="week-divider" $1>');
-              }
-            }
-          }
-          processedRows.push(row);
-        }
-        rendered = rendered.replace(tbody, processedRows.join('\n'));
-      }
-    }
-
-    return rendered;
+    return markdownLib.render(content);
   });
 
   return {

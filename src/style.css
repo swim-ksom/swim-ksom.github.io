@@ -371,7 +371,4 @@
     color: #475569;
 }
 
-.markdown-participants tr:hover {
-    background-color: #f9fafb;
-    transition: background-color 0.2s ease;
-}
+

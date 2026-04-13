@@ -1,0 +1,88 @@
+- type: week
+  label: Week 1
+- type: day
+  date: May 4 (Mon)
+  morning: Intro to Univ Math
+  afternoon: Intro to Univ Math
+- type: day
+  date: May 5 (Tue)
+  morning: Intro to Univ Math
+  afternoon: Intro to Univ Math
+- type: day
+  date: May 6 (Wed)
+  morning: Algebra
+  afternoon: Linear Algebra
+- type: day
+  date: May 7 (Thu)
+  morning: Linear Algebra
+  afternoon: Algebra
+- type: day
+  date: May 8 (Fri)
+  morning: Algebra
+  afternoon: Linear Algebra
+- type: week
+  label: Week 2
+- type: day
+  date: May 11 (Mon)
+  morning: Analysis
+  afternoon: Algebra
+- type: day
+  date: May 12 (Tue)
+  morning: Analysis
+  afternoon: Linear Algebra
+- type: day
+  date: May 13 (Wed)
+  morning: Algebra
+  afternoon: Linear Algebra
+- type: day
+  date: May 14 (Thu)
+  morning: Analysis
+  afternoon: Algebra
+- type: day
+  date: May 15 (Fri)
+  morning: Analysis
+  afternoon: Linear Algebra
+- type: week
+  label: Week 3
+- type: day
+  date: May 18 (Mon)
+  morning: Algebra
+  afternoon: Analysis
+- type: day
+  date: May 19 (Tue)
+  morning: Analysis
+  afternoon: Algebra
+- type: day
+  date: May 20 (Wed)
+  morning: Linear Algebra
+  afternoon: Analysis
+- type: day
+  date: May 21 (Thu)
+  morning: Algebra
+  afternoon: Linear Algebra
+- type: day
+  date: May 22 (Fri)
+  morning: Analysis
+  afternoon: Linear Algebra
+- type: week
+  label: Week 4
+- type: day
+  date: May 25 (Mon)
+  morning: Analysis
+  afternoon: Linear Algebra
+- type: day
+  date: May 26 (Tue)
+  morning: Analysis
+  afternoon: Algebra
+- type: day
+  date: May 27 (Wed)
+  morning: Algebra
+  afternoon: Linear Algebra
+- type: day
+  date: May 28 (Thu)
+  morning: Analysis
+  afternoon: Algebra
+- type: day
+  date: May 29 (Fri)
+  morning: Analysis
+  afternoon: Linear Algebra

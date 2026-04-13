@@ -6,10 +6,12 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
         <!-- HERO SECTION -->
         <section class="w-full pt-20 pb-16 bg-white border-b border-slate-200">
             <div class="container mx-auto px-4 md:px-8 max-w-5xl text-center">
+                {% if site.application.open %}
                 <div
                     class="mb-6 inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">
-                    Applications Open for 2026
+                    Applications Open for {{ site.upcoming.year }}
                 </div>
+                {% endif %}
                 <h1
                     class="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair text-slate-900 mb-6 leading-tight tracking-tight">
                     Summer Workshop in Mathematics
@@ -54,13 +56,13 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
 
                         <h2
                             class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-10 font-playfair tracking-tight">
-                            SWIM 2026</h2>
+                            SWIM {{ site.upcoming.year }}</h2>
 
                         <div
                             class="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 mb-10 w-full bg-white/5 py-6 px-4 rounded-2xl border border-white/5 backdrop-blur-sm">
                             <div class="flex flex-col items-center">
                                 <p class="text-sm text-slate-400 uppercase tracking-widest mb-1 font-semibold">Dates</p>
-                                <p class="text-xl md:text-2xl font-semibold text-white">May 4 &mdash; May 29</p>
+                                <p class="text-xl md:text-2xl font-semibold text-white">{{ site.upcoming.dates | safe }}</p>
                             </div>
 
                             <div class="hidden sm:block w-px h-12 bg-slate-700/50"></div>
@@ -76,23 +78,26 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
-                                    Kannur University Campus
+                                    {{ site.upcoming.venue }}
                                 </div>
                             </div>
                         </div>
 
                         <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgaSQsW_IKfV3s1ANZNLUakxxOL8BGUzwoj77PCj5Ye9zHZg/viewform"
+                            {% if site.application.open %}
+                            <a href="{{ site.application.link }}"
                                 target="_blank" rel="noopener noreferrer"
                                 class="inline-block w-full sm:w-auto px-10 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/25 text-lg">
                                 Click Here to Apply
                             </a>
-                            <a href="2026/"
+                            {% endif %}
+                            <a href="{{ site.upcoming.year }}/"
                                 class="inline-block w-full sm:w-auto px-10 py-4 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-medium rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-100/25 text-lg">
-                                SWIM 2026
+                                SWIM {{ site.upcoming.year }}
                             </a>
                         </div>
 
+                        {% if site.application.open %}
                         <div class="mt-10 flex justify-center">
                             <div
                                 class="inline-flex items-center gap-2 px-6 py-3 bg-rose-500/10 border border-rose-500/20 rounded-full text-rose-300 font-medium tracking-wide shadow-inner">
@@ -102,9 +107,10 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                Application Deadline: April 15, 2026
+                                Application Deadline: {{ site.application.deadline }}
                             </div>
                         </div>
+                        {% endif %}
 
                         <div class="text-slate-400 mt-10 pt-6 border-t border-slate-700/50 font-light text-sm">
                             For details on the previous edition, explore the
@@ -172,7 +178,7 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
                         <h3 class="text-xl font-bold text-slate-900 mb-4 font-playfair">Application Process</h3>
                         <p class="text-slate-600 font-light leading-relaxed">
                             Applications must be submitted exclusively through the online portal to be considered for
-                            SWIM 2026. Shortlisted candidates will receive formal confirmation via email.
+                            SWIM {{ site.upcoming.year }}. Shortlisted candidates will receive formal confirmation via email.
                         </p>
                     </div>
 
@@ -180,7 +186,7 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
                         class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
                         <h3 class="text-xl font-bold text-slate-900 mb-4 font-playfair">Accommodation</h3>
                         <p class="text-slate-600 font-light leading-relaxed">
-                            Complimentary meals and on-campus accommodation at Kannur University campus
+                            Complimentary meals and on-campus accommodation at {{ site.upcoming.venue }}
                             will be arranged for all selected participants.
                         </p>
                     </div>

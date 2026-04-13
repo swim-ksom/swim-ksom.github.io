@@ -1,0 +1,77 @@
+- week: Week 1
+  dates: May 5 – May 9
+  courses:
+    - name: Intro to Univ Math
+      speaker: "E.K. Narayanan (IISc Bengaluru) <br> Krishna Hanumanthu (CMI)"
+      ta: "Renjith T. (ISI Bangalore) <br> Gobinda Sau (ISI Bangalore)"
+      short_speaker: E.K. Narayanan & Krishna Hanumanthu
+      short_ta: Renjith T. & Gobinda Sau
+    - name: Analysis
+      speaker: E.K. Narayanan (IISc Bengaluru)
+      ta: Renjith T. (ISI Bangalore)
+      short_speaker: E.K. Narayanan
+      short_ta: Renjith T.
+    - name: Algebra
+      speaker: U.K. Anandavardhanan (IIT Bombay)
+      ta: Deepak Dileep (TIFR CAM Bangalore)
+      short_speaker: U.K. Anandavardhanan
+      short_ta: Deepak Dileep
+    - name: Linear Algebra
+      speaker: Krishna Hanumanthu (CMI)
+      ta: Gobinda Sau (ISI Bangalore)
+      short_speaker: Krishna Hanumanthu
+      short_ta: Gobinda Sau
+- week: Week 2
+  dates: May 12 – May 16
+  courses:
+    - name: Analysis
+      speaker: Jayanthan A.J. (KSoM Kozhikode)
+      ta: Renjith T. (ISI Bangalore)
+      short_speaker: Jayanthan A.J.
+      short_ta: Renjith T.
+    - name: Algebra
+      speaker: K.N. Raghavan (Krea University)
+      ta: Deepak Dileep (TIFR CAM Bangalore)
+      short_speaker: K.N. Raghavan
+      short_ta: Deepak Dileep
+    - name: Linear Algebra
+      speaker: Sruthymurali (Kannur University)
+      ta: Gobinda Sau (ISI Bangalore)
+      short_speaker: Sruthymurali
+      short_ta: Gobinda Sau
+- week: Week 3
+  dates: May 19 – May 23
+  courses:
+    - name: Analysis
+      speaker: Manjunath Krishnapur (IISc Bengaluru)
+      ta: Renjith T. (ISI Bangalore)
+      short_speaker: Manjunath Krishnapur
+      short_ta: Renjith T.
+    - name: Algebra
+      speaker: R. Venkatesh (IISc Bengaluru)
+      ta: Deepak Dileep (TIFR CAM Bangalore)
+      short_speaker: R. Venkatesh
+      short_ta: Deepak Dileep
+    - name: Linear Algebra
+      speaker: A. K. Vijayarajan (KSoM Kozhikode)
+      ta: Gobinda Sau (ISI Bangalore)
+      short_speaker: A. K. Vijayarajan
+      short_ta: Gobinda Sau
+- week: Week 4
+  dates: May 26 – May 30
+  courses:
+    - name: Analysis
+      speaker: Sanjay P. K. (NIT Calicut)
+      ta: Anoop V. P.
+      short_speaker: Sanjay P. K.
+      short_ta: Anoop V. P.
+    - name: Algebra
+      speaker: R. Venkatesh (IISc Bengaluru)
+      ta: Deepak Dileep (TIFR CAM Bangalore)
+      short_speaker: R. Venkatesh
+      short_ta: Deepak Dileep
+    - name: Linear Algebra
+      speaker: Divakaran D. (APU Bengaluru)
+      ta: Gobinda Sau (ISI Bangalore)
+      short_speaker: Divakaran D.
+      short_ta: Gobinda Sau

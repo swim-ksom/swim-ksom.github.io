@@ -1,0 +1,120 @@
+accommodation:
+  - sl_no: 1
+    app_id: SWIM250423162135
+    name: Balaji L
+  - sl_no: 2
+    app_id: SWIM250407204728
+    name: Alfa T
+  - sl_no: 3
+    app_id: SWIM250425134832
+    name: Lamiaa Mariyam B
+  - sl_no: 4
+    app_id: SWIM250424094735
+    name: Ranju Rajesh
+  - sl_no: 5
+    app_id: SWIM250424164440
+    name: Pavithra P M
+  - sl_no: 6
+    app_id: SWIM250422134834
+    name: Ninsha Ashokan Parakkandy
+  - sl_no: 7
+    app_id: SWIM250425154415
+    name: Sneha V N
+  - sl_no: 8
+    app_id: SWIM250425173710
+    name: Shabeeba VK
+  - sl_no: 9
+    app_id: SWIM250424234341
+    name: Midhuna K
+  - sl_no: 10
+    app_id: SWIM250416162647
+    name: Sanghamitra Sreekanth
+  - sl_no: 11
+    app_id: SWIM250423171635
+    name: Adithya Mohan N.
+  - sl_no: 12
+    app_id: SWIM250417112823
+    name: B. Sowmya
+  - sl_no: 13
+    app_id: SWIM250420191540
+    name: Abinav Kanhaa K
+  - sl_no: 14
+    app_id: SWIM250422170101
+    name: Rajil C R
+  - sl_no: 15
+    app_id: SWIM250425134738
+    name: Divya Lakshmi T
+  - sl_no: 16
+    app_id: SWIM250424125907
+    name: Hiba Fathima
+  - sl_no: 17
+    app_id: SWIM250409221143
+    name: Ashwin Deepak Cordeiro
+  - sl_no: 18
+    app_id: SWIM250424165307
+    name: Almas Fathima P
+  - sl_no: 19
+    app_id: SWIM250425113040
+    name: Angel Sreejith
+  - sl_no: 20
+    app_id: SWIM250425000142
+    name: Anuvind C
+  - sl_no: 21
+    app_id: SWIM250426000331
+    name: Dea Mary Denzil
+  - sl_no: 22
+    app_id: SWIM250418103300
+    name: M.N. Narendran
+  - sl_no: 23
+    app_id: SWIM250425221226
+    name: Nabeesathul Missriya
+  - sl_no: 24
+    app_id: SWIM250424131217
+    name: Afna Salim P
+  - sl_no: 25
+    app_id: SWIM250414092244
+    name: Bibiya Mary Kurian
+  - sl_no: 26
+    app_id: SWIM250414121857
+    name: Anuvidhya Shaji
+
+local:
+  - sl_no: 1
+    app_id: SWIM250411143224
+    name: Rasina C
+  - sl_no: 2
+    app_id: SWIM250424221233
+    name: Arya K
+  - sl_no: 3
+    app_id: SWIM250424221139
+    name: Jeevana S S
+  - sl_no: 4
+    app_id: SWIM250424220233
+    name: Alok K P
+  - sl_no: 5
+    app_id: SWIM250424183107
+    name: Shana KC
+  - sl_no: 6
+    app_id: SWIM250425151053
+    name: Hina Akbar
+  - sl_no: 7
+    app_id: SWIM250425162831
+    name: Shalabha Chandran K
+  - sl_no: 8
+    app_id: SWIM250424191448
+    name: Fathimathul Sahala K N
+  - sl_no: 9
+    app_id: SWIM250425164115
+    name: Ananya K V
+  - sl_no: 10
+    app_id: SWIM250425135940
+    name: Karthika KV
+  - sl_no: 11
+    app_id: SWIM250424110032
+    name: Sneha K
+  - sl_no: 12
+    app_id: SWIM250424162607
+    name: Asnin Shan
+  - sl_no: 13
+    app_id: SWIM250424192209
+    name: Adithya K
