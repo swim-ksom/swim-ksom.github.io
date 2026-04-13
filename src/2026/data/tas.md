@@ -1,4 +1,0 @@
-- Gobindo Sau (IIT Madras)(Week 1&2)
-- Archana (IISc Bangalore)(Week 1)
-- Vyshnav (IISc Bangalore)(Week 1)
-- Hari (IMSc Chennai)(Week 2)
