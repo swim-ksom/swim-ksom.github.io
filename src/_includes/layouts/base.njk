@@ -2,6 +2,9 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
+    {% if edition %}
+    {% set edInfo = site.editions | selectattr("year", "equalto", edition | string) | first %}
+    {% endif %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title | default("SWIM@KSoM - Summer Workshop in Mathematics") }}</title>
