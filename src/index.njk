@@ -104,7 +104,7 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
                         </div>
 
                         {% if site.application.open %}
-                        <div class="mt-10 flex justify-center">
+                        <div class="mt-10 flex flex-col items-center gap-4">
                             <div
                                 class="inline-flex items-center gap-2 px-6 py-3 bg-rose-500/10 border border-rose-500/20 rounded-full text-rose-300 font-medium tracking-wide shadow-inner">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-pulse text-rose-400"
@@ -115,6 +115,11 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
                                 </svg>
                                 Application Deadline: {{ site.application.deadline }}
                             </div>
+                            {% if site.application.selection_date %}
+                            <p class="text-indigo-300 text-sm font-bold">
+                                First list of selected participants will be announced on {{ site.application.selection_date }}
+                            </p>
+                            {% endif %}
                         </div>
                         {% endif %}
 
