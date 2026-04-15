@@ -18,7 +18,8 @@
   "upcoming": {
     "year": "2026",
     "dates": "May 4 &mdash; May 29",
-    "venue": "Kannur University Campus"
+    "venue": "Kannur University Campus",
+    "poster": "/2026/poster.pdf"
   },
   "colors": {
     "Intro to Univ Math": {
