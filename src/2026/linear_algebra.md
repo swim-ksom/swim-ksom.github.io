@@ -3,8 +3,6 @@ layout: layouts/course.njk
 title: SWIM@KSoM - Summer Workshop in Mathematics
 course_title: Linear Algebra
 course_id: Linear Algebra
-edition: 2026
-permalink: /2026/linear_algebra/
 lectures:
   - topics: "Introduces subspaces (definitions, examples in $\\textbf{R}^{n}$) and fields (axioms, $\\textbf{Q}/\\textbf{R}/\\textbf{C}$), linking algebraic structures to geometric intuition."
   - topics: "Generalizes subspaces to abstract vector spaces over arbitrary fields, emphasizing axioms, examples (matrices, function spaces), and scalar-field dependencies."

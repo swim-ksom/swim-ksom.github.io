@@ -3,8 +3,6 @@ layout: layouts/course.njk
 title: SWIM@KSoM - Summer Workshop in Mathematics
 course_title: Real Analysis
 course_id: Analysis
-edition: 2026
-permalink: /2026/analysis/
 lectures:
   - topics: "Introduction to Sequences: Definition of a sequence, convergence, limits, uniqueness of limits, bounded sequences."
   - topics: "Limit Laws, Monotonicity, and Cauchy Sequences: Limit laws, monotonic sequences (definition, examples), Cauchy sequences, completeness via Cauchy."

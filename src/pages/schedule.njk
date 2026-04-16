@@ -1,0 +1,11 @@
+---
+pagination:
+  data: editions.list
+  size: 1
+  alias: editionData
+permalink: "/{{ editionData.year }}/schedule/index.html"
+layout: layouts/edition.njk
+show_schedule: true
+eleventyComputed:
+  title: "Schedule - SWIM {{ editionData.year }}"
+---

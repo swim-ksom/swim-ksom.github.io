@@ -10,20 +10,39 @@ module.exports = function() {
   const folders = fs.readdirSync(srcDir).filter(file => /^\d{4}$/.test(file));
   
   folders.forEach(folder => {
-    const dataPath = path.join(srcDir, folder, 'data', 'data.yaml');
+    const dataDir = path.join(srcDir, folder, 'data');
+    const dataPath = path.join(dataDir, 'data.yaml');
+    const speakersPath = path.join(dataDir, 'speakers.yaml');
+    const schedulePath = path.join(dataDir, 'schedule.yaml');
+    const participantsPath = path.join(dataDir, 'participants.yaml');
+    
+    let edData = {};
     if (fs.existsSync(dataPath)) {
       try {
-        const data = yaml.load(fs.readFileSync(dataPath, 'utf8'));
-        // Basic folder-based attributes if missing
-        editionsList.push({
-          ...data,
-          year: String(data.year || folder),
-          url: data.url || `/${folder}/`
-        });
-      } catch (e) {
-        console.error(`Error parsing ${dataPath}:`, e);
-      }
+        edData = yaml.load(fs.readFileSync(dataPath, 'utf8')) || {};
+      } catch (e) { console.error(`Error parsing ${dataPath}:`, e); }
     }
+    
+    let speakers = [], schedules = [], participants = {};
+    if (fs.existsSync(speakersPath)) {
+        try { speakers = yaml.load(fs.readFileSync(speakersPath, 'utf8')) || []; } catch(e) {}
+    }
+    if (fs.existsSync(schedulePath)) {
+        try { schedules = yaml.load(fs.readFileSync(schedulePath, 'utf8')) || []; } catch(e) {}
+    }
+    if (fs.existsSync(participantsPath)) {
+        try { participants = yaml.load(fs.readFileSync(participantsPath, 'utf8')) || {}; } catch(e) {}
+    }
+
+    editionsList.push({
+      ...edData,
+      edInfo: edData,
+      year: String(edData.year || folder),
+      url: edData.url || `/${folder}/`,
+      speakers,
+      schedules,
+      participants
+    });
   });
 
   // Sort by year descending

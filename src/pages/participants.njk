@@ -1,0 +1,11 @@
+---
+pagination:
+  data: editions.list
+  size: 1
+  alias: editionData
+permalink: "/{{ editionData.year }}/participants/index.html"
+layout: layouts/edition.njk
+show_participants: true
+eleventyComputed:
+  title: "Selected Participants - SWIM {{ editionData.year }}"
+---

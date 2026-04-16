@@ -3,8 +3,6 @@ layout: layouts/course.njk
 title: SWIM@KSoM - Summer Workshop in Mathematics
 course_title: Introduction to University Mathematics
 course_id: Intro to Univ Math
-edition: 2026
-permalink: /2026/univmath/
 lectures:
   - topics: "Building the Number System: Integers, Rationals, and Their Gaps (arithmetic, algebraic properties, gaps). Constructing the Real Numbers (formal construction, filling the gaps, complete ordered field)."
   - topics: "The Natural Numbers, Induction, and Sets (including operations and cardinality)."

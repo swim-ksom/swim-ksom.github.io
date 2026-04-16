@@ -3,8 +3,6 @@ layout: layouts/course.njk
 title: SWIM@KSoM - Summer Workshop in Mathematics
 course_title: Real Analysis
 course_id: Analysis
-edition: 2025
-permalink: /2025/analysis/
 lectures:
   - topics: "Introduction to Sequences: Definition of a sequence, convergence, limits, uniqueness of limits, bounded sequences."
     resources:

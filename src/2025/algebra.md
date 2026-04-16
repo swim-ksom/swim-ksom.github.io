@@ -3,8 +3,6 @@ layout: layouts/course.njk
 title: SWIM@KSoM - Summer Workshop in Mathematics
 course_title: Abstract Algebra
 course_id: Algebra
-edition: 2025
-permalink: /2025/algebra/
 lectures:
   - topics: "Covers matrix operations (addition, multiplication, scalar multiplication) and row reduction techniques. Focus on mechanics and solving linear systems."
   - topics: "Introduces matrix transposition and determinants, including computation methods and properties under row operations."
