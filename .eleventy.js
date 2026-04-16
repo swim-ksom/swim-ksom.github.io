@@ -37,17 +37,7 @@ module.exports = function(eleventyConfig) {
   let markdownLib = markdownIt(mdOptions);
   eleventyConfig.setLibrary("md", markdownLib);
   
-  // Custom filter to render markdown inside njk tags
-  eleventyConfig.addFilter("markdown", (content) => {
-    return markdownLib.render(content);
-  });
 
-  const fs = require("fs");
-  eleventyConfig.addShortcode("renderMarkdown", function(filePath) {
-    if (!fs.existsSync(filePath)) return "";
-    let content = fs.readFileSync(filePath, 'utf8');
-    return markdownLib.render(content);
-  });
 
   return {
     dir: {
