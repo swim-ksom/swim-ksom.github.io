@@ -10,8 +10,15 @@ module.exports = function() {
   const speakers = yaml.load(fs.readFileSync(speakersPath, "utf8"));
   const schedules = yaml.load(fs.readFileSync(schedulesPath, "utf8"));
   const participants = yaml.load(fs.readFileSync(participantsPath, "utf8"));
+  
+  let extraData = {};
+  const dataPath = path.join(__dirname, "data/data.yaml");
+  if (fs.existsSync(dataPath)) {
+    extraData = yaml.load(fs.readFileSync(dataPath, "utf8"));
+  }
 
   return {
+    ...extraData,
     speakers: speakers,
     schedules: schedules,
     participants: participants
