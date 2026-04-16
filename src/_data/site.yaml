@@ -4,20 +4,6 @@ application:
   deadline: "April 20, 2026"
   selection_date: "April 22, 2026"
   link: "https://docs.google.com/forms/d/e/1FAIpQLSdgaSQsW_IKfV3s1ANZNLUakxxOL8BGUzwoj77PCj5Ye9zHZg/viewform"
-editions:
-  - year: "2026"
-    url: "/2026/"
-    dates: "May 04, 2026 to May 29, 2026"
-    venue: "Kannur University Campus"
-  - year: "2025"
-    url: "/2025/"
-    dates: "May 07, 2025 to May 30, 2025"
-    venue: "Kannur University Campus"
-upcoming:
-  year: "2026"
-  dates: "May 4 &mdash; May 29"
-  venue: "Kannur University Campus"
-  poster: "/2026/poster.pdf"
 colors:
   "Intro to Univ Math":
     badge: "text-blue-700 bg-blue-100 ring-1 ring-inset ring-blue-600/20"

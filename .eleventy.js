@@ -1,8 +1,12 @@
 const markdownIt = require("markdown-it");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const yaml = require("js-yaml");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  
+  // Register YAML support for data files
+  eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 
   // Let eleventy know what formats we expect
   eleventyConfig.setTemplateFormats([

@@ -19,7 +19,7 @@
                     class="text-slate-100 hover:text-white hover:bg-slate-800 transition-colors px-3 py-2 rounded-md text-base font-semibold tracking-wide whitespace-nowrap">
                     Home
                 </a>
-                {% for edition in site.editions %}
+                {% for edition in editions.list %}
                 <a href="{{ edition.url }}"
                     class="text-slate-100 hover:text-white hover:bg-slate-800 transition-colors px-3 py-2 rounded-md text-base font-semibold tracking-wide whitespace-nowrap">
                     SWIM {{ edition.year }}

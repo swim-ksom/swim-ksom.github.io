@@ -3,7 +3,7 @@
 
 <head>
     {% if edition %}
-    {% set edInfo = site.editions | selectattr("year", "equalto", edition | string) | first %}
+    {% set edInfo = editions.list | selectattr("year", "equalto", edition | string) | first %}
     {% endif %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

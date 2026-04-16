@@ -9,7 +9,7 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
                 {% if site.application.open %}
                 <div
                     class="mb-6 inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">
-                    Applications Open for {{ site.upcoming.year }}
+                    Applications Open for {{ editions.upcoming.year }}
                 </div>
                 {% endif %}
                 <h1
@@ -56,13 +56,13 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
 
                         <h2
                             class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-10 font-playfair tracking-tight">
-                            SWIM {{ site.upcoming.year }}</h2>
+                            SWIM {{ editions.upcoming.year }}</h2>
 
                         <div
                             class="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 mb-10 w-full bg-white/5 py-6 px-4 rounded-2xl border border-white/5 backdrop-blur-sm">
                             <div class="flex flex-col items-center">
                                 <p class="text-sm text-slate-400 uppercase tracking-widest mb-1 font-semibold">Dates</p>
-                                <p class="text-xl md:text-2xl font-semibold text-white">{{ site.upcoming.dates | safe }}</p>
+                                <p class="text-xl md:text-2xl font-semibold text-white">{{ editions.upcoming.dates_short | safe }}</p>
                             </div>
 
                             <div class="hidden sm:block w-px h-12 bg-slate-700/50"></div>
@@ -78,7 +78,7 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
-                                    {{ site.upcoming.venue }}
+                                    {{ editions.upcoming.venue }}
                                 </div>
                             </div>
                         </div>
@@ -91,12 +91,12 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
                                 Click Here to Apply
                             </a>
                             {% endif %}
-                            <a href="{{ site.upcoming.year }}/"
+                            <a href="{{ editions.upcoming.url }}"
                                 class="inline-block w-full sm:w-auto px-10 py-4 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-medium rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-100/25 text-lg">
-                                SWIM {{ site.upcoming.year }}
+                                SWIM {{ editions.upcoming.year }}
                             </a>
-                            {% if site.upcoming.poster %}
-                            <a href="{{ site.upcoming.poster }}" target="_blank"
+                            {% if editions.upcoming.poster %}
+                            <a href="{{ editions.upcoming.poster }}" target="_blank"
                                 class="inline-block w-full sm:w-auto px-10 py-4 bg-white/10 hover:bg-white/20 text-white font-medium rounded-xl border border-white/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-sm text-lg">
                                 View Poster
                             </a>
@@ -189,7 +189,7 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
                         <h3 class="text-xl font-bold text-slate-900 mb-4 font-playfair">Application Process</h3>
                         <p class="text-slate-600 font-light leading-relaxed">
                             Applications must be submitted exclusively through the online portal to be considered for
-                            SWIM {{ site.upcoming.year }}. Shortlisted candidates will receive formal confirmation via email.
+                            SWIM {{ editions.upcoming.year }}. Shortlisted candidates will receive formal confirmation via email.
                         </p>
                     </div>
 
@@ -197,7 +197,7 @@ title: SWIM@KSoM - Summer Workshop in Mathematics
                         class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
                         <h3 class="text-xl font-bold text-slate-900 mb-4 font-playfair">Accommodation</h3>
                         <p class="text-slate-600 font-light leading-relaxed">
-                            Complimentary meals and on-campus accommodation at {{ site.upcoming.venue }}
+                            Complimentary meals and on-campus accommodation at {{ editions.upcoming.venue }}
                             will be arranged for all selected participants.
                         </p>
                     </div>
