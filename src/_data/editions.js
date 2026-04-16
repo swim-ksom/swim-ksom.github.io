@@ -17,7 +17,7 @@ module.exports = function() {
         // Basic folder-based attributes if missing
         editionsList.push({
           ...data,
-          year: data.year || folder,
+          year: String(data.year || folder),
           url: data.url || `/${folder}/`
         });
       } catch (e) {
@@ -27,7 +27,7 @@ module.exports = function() {
   });
 
   // Sort by year descending
-  editionsList.sort((a, b) => b.year - a.year);
+  editionsList.sort((a, b) => Number(b.year) - Number(a.year));
 
   // Load site config to find upcoming edition
   let upcoming = null;
@@ -35,12 +35,19 @@ module.exports = function() {
   if (fs.existsSync(siteConfigPath)) {
     const siteConfig = yaml.load(fs.readFileSync(siteConfigPath, 'utf8'));
     if (siteConfig.current_edition) {
-      upcoming = editionsList.find(e => e.year === siteConfig.current_edition);
+      const currentYear = String(siteConfig.current_edition);
+      upcoming = editionsList.find(e => String(e.year) === currentYear);
     }
   }
 
+  const editionsMap = {};
+  editionsList.forEach(ed => {
+    editionsMap[ed.year] = ed;
+  });
+
   return {
     list: editionsList,
+    map: editionsMap,
     upcoming: upcoming
   };
 };

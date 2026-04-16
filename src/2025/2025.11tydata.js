@@ -19,6 +19,7 @@ module.exports = function() {
 
   return {
     ...extraData,
+    edInfo: extraData,
     speakers: speakers,
     schedules: schedules,
     participants: participants
