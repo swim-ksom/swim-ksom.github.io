@@ -5,16 +5,16 @@
       speaker_1: K N Raghavan (Krea University)
       speaker_2: Krishna Hanumanthu (CMI)
       ta_1: Gobindo Sau (IIT Madras)
-      ta_2: Gayathri (IMSc)
+      ta_2: Gayathri M (IMSc Chennai)
       short_speaker_1: K N Raghavan
       short_speaker_2: Krishna Hanumanthu
       short_ta_1: Gobindo Sau
-      short_ta_2: Gayathri
+      short_ta_2: Gayathri M
     - name: Algebra
       speaker: Krishna Hanumanthu (CMI)
-      ta: Gayathri (IMSc)
+      ta: Gayathri M (IMSc Chennai)
       short_speaker: Krishna Hanumanthu
-      short_ta: Gayathri
+      short_ta: Gayathri M
     - name: Linear Algebra
       speaker: K N Raghavan (Krea University)
       ta: Gobindo Sau (IIT Madras)
@@ -25,14 +25,14 @@
   courses:
     - name: Analysis
       speaker: B V Rao (CMI)
-      ta: Archana (IISc Bangalore)
+      ta: Archana M P (IISc Bangalore)
       short_speaker: B V Rao
-      short_ta: Archana
+      short_ta: Archana M P
     - name: Algebra
       speaker: Tulsi Srinivasan (APU Bengaluru)
-      ta: Hari (IMSc)
+      ta: Harikrishnan T R (IMSc Chennai)
       short_speaker: Tulsi Srinivasan
-      short_ta: Hari
+      short_ta: Harikrishnan T R
     - name: Linear Algebra
       speaker: Divakaran D. (APU Bengaluru)
       ta: Gobindo Sau (IIT Madras)
@@ -48,9 +48,9 @@
       short_ta: Arindam Sutradhar
     - name: Algebra
       speaker: Mohan R (APU Bengaluru)
-      ta: Vyshnav (IISc Bangalore)
+      ta: Vyshnav V (IISc Bangalore)
       short_speaker: Mohan R
-      short_ta: Vyshnav
+      short_ta: Vyshnav V
     - name: Linear Algebra
       speaker: Divakaran D. (APU Bengaluru)
       ta: Jiju Mamen (IIT Palakkad)
@@ -61,7 +61,7 @@
   courses:
     - name: Analysis
       speaker: Anwoy Maitra (IIT Madra)
-      ta: Faheem (IISc Bangalore)*
+      ta: Faheem (IISc Bangalore)
       short_speaker: Anwoy Maitra
       short_ta: Faheem
     - name: Algebra
