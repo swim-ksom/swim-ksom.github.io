@@ -2,75 +2,75 @@
   dates: May 4 – May 8
   courses:
     - name: Intro to Univ Math
-      speaker_1: K N Raghavan (Krea University)
-      speaker_2: Krishna Hanumanthu (CMI)
-      ta_1: Gobindo Sau (IIT Madras)
-      ta_2: Gayathri M (IMSc Chennai)
-      short_speaker_1: K N Raghavan
-      short_speaker_2: Krishna Hanumanthu
-      short_ta_1: Gobindo Sau
-      short_ta_2: Gayathri M
+      speaker_1: K N Raghavan
+      institute_1: Krea University
+      speaker_2: Krishna Hanumanthu
+      institute_2: CMI
+      ta_1: Gobindo Sau
+      ta_institute_1: IIT Madras
+      ta_2: Gayathri M
+      ta_institute_2: IMSc Chennai
     - name: Algebra
-      speaker: Krishna Hanumanthu (CMI)
-      ta: Gayathri M (IMSc Chennai)
-      short_speaker: Krishna Hanumanthu
-      short_ta: Gayathri M
+      speaker: Krishna Hanumanthu
+      institute: CMI
+      ta: Gayathri M
+      ta_institute: IMSc Chennai
     - name: Linear Algebra
-      speaker: K N Raghavan (Krea University)
-      ta: Gobindo Sau (IIT Madras)
-      short_speaker: K N Raghavan
-      short_ta: Gobindo Sau
+      speaker: K N Raghavan
+      institute: Krea University
+      ta: Gobindo Sau
+      ta_institute: IIT Madras
 - week: Week 2
   dates: May 11 – May 15
   courses:
     - name: Analysis
-      speaker: B V Rao (CMI)
-      ta: Archana M P (IISc Bangalore)
-      short_speaker: B V Rao
-      short_ta: Archana M P
+      speaker: B V Rao
+      institute: CMI
+      ta: Archana M P
+      ta_institute: IISc Bangalore
     - name: Algebra
-      speaker: Tulsi Srinivasan (APU Bengaluru)
-      ta: Harikrishnan T R (IMSc Chennai)
-      short_speaker: Tulsi Srinivasan
-      short_ta: Harikrishnan T R
+      speaker: Tulsi Srinivasan
+      institute: APU Bengaluru
+      ta: Harikrishnan T R
+      ta_institute: IMSc Chennai
     - name: Linear Algebra
-      speaker: Divakaran D. (APU Bengaluru)
-      ta: Gobindo Sau (IIT Madras)
-      short_speaker: Divakaran D.
-      short_ta: Gobindo Sau
+      speaker: Divakaran D.
+      institute: APU Bengaluru
+      ta: Gobindo Sau
+      ta_institute: IIT Madras
 - week: Week 3
   dates: May 18 – May 22
   courses:
     - name: Analysis
-      speaker: K. S. Senthil Rani (IISER Berhampur)
-      ta: Arindam Sutradhar (IIT Madras)
-      short_speaker: K. S. Senthil Rani
-      short_ta: Arindam Sutradhar
+      speaker: K. S. Senthil Rani
+      institute: IISER Berhampur
+      ta: Arindam Sutradhar
+      ta_institute: IIT Madras
     - name: Algebra
-      speaker: Mohan R (APU Bengaluru)
-      ta: Vyshnav V (IISc Bangalore)
-      short_speaker: Mohan R
-      short_ta: Vyshnav V
+      speaker: Mohan R
+      institute: APU Bengaluru
+      ta: Vyshnav V
+      ta_institute: IISc Bangalore
     - name: Linear Algebra
-      speaker: Divakaran D. (APU Bengaluru)
-      ta: Jiju Mamen (IIT Palakkad)
-      short_speaker: Divakaran D.
-      short_ta: Jiju Mamen
+      speaker: Divakaran D.
+      institute: APU Bengaluru
+      ta: Jiju Mamen
+      ta_institute: IIT Palakkad
 - week: Week 4
   dates: May 25 – May 29
   courses:
     - name: Analysis
-      speaker: Anwoy Maitra (IIT Madra)
-      ta: Faheem (IISc Bangalore)
-      short_speaker: Anwoy Maitra
-      short_ta: Faheem
+      speaker: Anwoy Maitra
+      institute: IIT Madra
+      ta: Faheem
+      ta_institute: IISc Bangalore
     - name: Algebra
-      speaker: R. Venkatesh (IISc Bengaluru)
-      ta: Amritha Varrier (IIT Madras)
-      short_speaker: R. Venkatesh
-      short_ta: Amritha Varrier
+      speaker: R. Venkatesh
+      institute: IISc Bengaluru
+      ta: Amritha Varrier
+      ta_institute: IIT Madras
     - name: Linear Algebra
-      speaker: G. P. Balakumar (IIT Palakkad)
-      ta: Chinnapparaj R (IIT Palakkad)
-      short_speaker: G. P. Balakumar
-      short_ta: Chinnapparaj R
+      speaker: G. P. Balakumar
+      institute: IIT Palakkad
+      ta: Chinnapparaj R
+      ta_institute: IIT Palakkad

@@ -60,16 +60,18 @@ layout: layouts/base.njk
                       <td class="px-6 py-4 whitespace-wrap text-sm text-gray-900 align-top font-semibold">{{ course.name }}</td>
                       <td class="px-6 py-4 whitespace-wrap text-sm text-gray-700 align-top">
                         {% if course.speaker_1 %}
-                          {{ course.speaker_1 | safe }} <br> {{ course.speaker_2 | safe }}
+                          {{ course.speaker_1 | safe }}{% if course.institute_1 %} ({{ course.institute_1 }}){% endif %}<br>
+                          {{ course.speaker_2 | safe }}{% if course.institute_2 %} ({{ course.institute_2 }}){% endif %}
                         {% else %}
-                          {{ course.speaker | safe }}
+                          {{ course.speaker | safe }}{% if course.institute %} ({{ course.institute }}){% endif %}
                         {% endif %}
                       </td>
                       <td class="px-6 py-4 whitespace-wrap text-sm text-gray-700 align-top">
                         {% if course.ta_1 %}
-                          {{ course.ta_1 | safe }} <br> {{ course.ta_2 | safe }}
+                          {{ course.ta_1 | safe }}{% if course.ta_institute_1 %} ({{ course.ta_institute_1 }}){% endif %}<br>
+                          {{ course.ta_2 | safe }}{% if course.ta_institute_2 %} ({{ course.ta_institute_2 }}){% endif %}
                         {% else %}
-                          {{ course.ta | safe }}
+                          {{ course.ta | safe }}{% if course.ta_institute %} ({{ course.ta_institute }}){% endif %}
                         {% endif %}
                       </td>
                     </tr>

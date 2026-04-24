@@ -9,11 +9,18 @@
         {% for crs in weekObj.courses %}
           {% if crs.name == courseName %}
              {% if index %}
-               {% set sKey = "short_speaker_" + index %}
-               {% set tKey = "short_ta_" + index %}
-               {% set found = crs[sKey] + " &ndash; " + crs[tKey] %}
+               {% set sName = crs["speaker_" + index] %}
+               {% set sInst = crs["institute_" + index] %}
+               {% set tName = crs["ta_" + index] %}
+               {% set tInst = crs["ta_institute_" + index] %}
+               
+               {% set sFull = sName + ((" (" + sInst + ")") if sInst else "") %}
+               {% set tFull = tName + ((" (" + tInst + ")") if tInst else "") %}
+               {% set found = sFull + " &ndash; " + tFull %}
              {% else %}
-               {% set found = crs.short_speaker + " &ndash; " + crs.short_ta %}
+               {% set sFull = crs.speaker + ((" (" + crs.institute + ")") if crs.institute else "") %}
+               {% set tFull = crs.ta + ((" (" + crs.ta_institute + ")") if crs.ta_institute else "") %}
+               {% set found = sFull + " &ndash; " + tFull %}
              {% endif %}
           {% endif %}
         {% endfor %}
