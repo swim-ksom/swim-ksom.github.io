@@ -134,9 +134,17 @@ layout: layouts/base.njk
     {% if show_schedule %}
     <!-- SCHEDULE SECTION -->
     <section id="schedule" class="mb-20">
-        <h2 class="text-2xl md:text-3xl font-bold font-roboto text-slate-900 mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold font-roboto text-slate-900 mb-4">
             Lecture Schedule
         </h2>
+        <div class="mb-8 p-4 bg-amber-50 border-l-4 border-amber-400 text-amber-800 rounded-r-lg text-sm shadow-sm">
+            <p class="font-medium flex items-center">
+                <svg class="w-5 h-5 mr-2 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                </svg>
+                Note: The schedule is tentative and may be subject to change during the program.
+            </p>
+        </div>
         <div class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="p-6 bg-indigo-50/50 border border-indigo-100 rounded-xl">
                 <h3 class="font-bold text-indigo-900 mb-3 font-roboto text-xl">Morning Session</h3>

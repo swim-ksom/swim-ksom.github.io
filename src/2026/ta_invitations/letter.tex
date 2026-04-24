@@ -1,0 +1,82 @@
+\documentclass[12pt]{letter}
+\usepackage{graphicx,geometry,url,pgffor}
+\newgeometry{margin=2cm}
+
+\begin{document}
+
+\foreach \name/\dates/\affiliation in {
+		Gobindo Sau/May 04 to May 15/IIT Madras,
+		Gayathri M/May 04 to May 08/IMSc Chennai,
+		Archana/May 11 to May 15/IISc Bangalore,
+		Harikrishnan T R/May 11 to May 15/IMSc Chennai,
+		Arindam Sutradhar/May 18 to May 22/IIT Madras,
+		Vyshnav V/May 18 to May 22/IISc Bangalore,
+		Jiju Mamen/May 18 to May 22/IIT Palakkad,
+		Faheem/May 25 to May 29/IISc Bangalore,
+		Amritha Varrier/May 25 to May 29/IIT Madras,
+		Chinnapparaj R/May 25 to May 29/IIT Palakkad%
+	} {
+		\thispagestyle{empty}
+		\begin{minipage}{3cm}
+			\includegraphics[width=2.8cm]{logo}
+		\end{minipage}
+		\begin{minipage}{14cm}
+			\centering
+			\textbf{\Large Department of Mathematical Sciences}
+
+			\bigskip
+
+			\textbf{\Large Kannur University, Kerala, India - 670002}
+		\end{minipage}
+		\smallskip
+		\hrule
+
+		\bigskip
+
+		\textbf{Anoop V. P}\hfill\url{https://vpanoop.github.io/}\\
+		Assistant Professor\hfill anoopvp@kannuruniv.ac.in
+
+		\bigskip
+
+		\textbf{\name},\\
+		Research Scholar,\\
+		Department of Mathematics,\\
+		\affiliation
+
+		\bigskip
+
+		% Subject
+		\begin{center}
+			\textbf{\large Subject: Invitation to serve as Teaching Assistant for SWIM@2026}
+		\end{center}
+
+		\bigskip
+
+		Dear \name,
+
+		\bigskip
+
+		It is our pleasure to inform you that the Kerala School of Mathematics (KSoM), in association with the Department of Mathematical Sciences, Kannur University, is organizing the \textbf{Summer Workshop in Mathematics (SWIM@KSoM)} from May 04 to May 29, 2026.
+
+		We are pleased to invite you to join us as a \textbf{Teaching Assistant} for this workshop from \textbf{\dates, 2026}. The program will be held at the Kannur University Campus, Kerala.
+
+		As a Teaching Assistant, your role will be vital in guiding the participants through problem-solving sessions and contributing to the academic success of the workshop. We will take care of your travel expenses and accommodation for the duration of your stay.
+
+		We look forward to your participation and to a successful workshop.
+
+		\bigskip
+
+		With best regards,
+
+		\bigskip
+
+		\begin{minipage}{0.4\textwidth}
+			Sincerely,\\[0.3cm]
+			\includegraphics[width=3cm]{Signature}\\[0.1cm]
+			\textbf{Anoop V. P.}
+		\end{minipage}
+
+		\clearpage
+	}
+
+\end{document}
