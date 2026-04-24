@@ -3,219 +3,221 @@ layout: layouts/base.njk
 title: SWIM@KSoM - Summer Workshop in Mathematics
 ---
 
-        <!-- HERO SECTION -->
-        <section class="w-full pt-20 pb-16 bg-white border-b border-slate-200">
-            <div class="container mx-auto px-4 md:px-8 max-w-5xl text-center">
-                {% if site.application.open %}
-                <div
-                    class="mb-6 inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">
-                    Applications Open for {{ editions.upcoming.year }}
+<!-- HERO SECTION -->
+<section class="w-full pt-20 pb-16 bg-white border-b border-slate-200">
+    <div class="container mx-auto px-4 md:px-8 max-w-5xl text-center">
+        {% if site.application.open %}
+            <div class="mb-6 inline-block rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-inset
+                    ring-indigo-700/10">
+                Applications Open for {{ editions.upcoming.year }}
+            </div>
+        {% else %}
+            <div class="mb-6 inline-block rounded-full bg-slate-100 px-4 py-1.5 text-sm font-medium text-slate-600 ring-1 ring-inset
+                    ring-slate-500/10">
+                Applications Closed for {{ editions.upcoming.year }}
+            </div>
+        {% endif %}
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair text-slate-900 mb-6 leading-tight tracking-tight">
+            Summer Workshop in Mathematics
+        </h1>
+        <p class="text-lg md:text-xl text-slate-600 mb-4 max-w-3xl mx-auto font-light leading-relaxed">
+            A rigorous and focused instructional program designed for highly motivated students.
+        </p>
+        <p class="text-base md:text-lg text-slate-600 mb-10 max-w-3xl mx-auto">
+            Jointly organized by
+            <a
+                href="https://ksom.res.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium transition-colors">Kerala School of Mathematics</a>
+            and
+            <a
+                href="https://www.kannuruniversity.ac.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium transition-colors">Kannur University</a>.
+        </p>
+    </div>
+</section>
+<!-- ANNOUNCEMENT SECTION (Standalone box) -->
+<section id="announcement" class="w-full py-16 bg-white border-b border-slate-200">
+    <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+        <div
+            class="relative overflow-hidden bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl text-center text-white ring-1
+                ring-white/10">
+            <!-- Decorative Background Gradients -->
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl opacity-50 mix-blend-screen
+                pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl opacity-50 mix-blend-screen
+                pointer-events-none"></div>
+            <div class="relative z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium
+                        text-indigo-300 mb-6 backdrop-blur-sm">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                    </span>
+                    Upcoming Edition
                 </div>
-                {% endif %}
-                <h1
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair text-slate-900 mb-6 leading-tight tracking-tight">
-                    Summer Workshop in Mathematics
-                </h1>
-                <p class="text-lg md:text-xl text-slate-600 mb-4 max-w-3xl mx-auto font-light leading-relaxed">
-                    A rigorous and focused instructional program designed for highly motivated students.
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-10 font-playfair tracking-tight">
+                    SWIM
+                {{ editions.upcoming.year }}</h2>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 mb-10 w-full bg-white/5 py-6 px-4
+                        rounded-2xl border border-white/5 backdrop-blur-sm">
+                    <div class="flex flex-col items-center">
+                        <p class="text-sm text-slate-400 uppercase tracking-widest mb-1 font-semibold">Dates</p>
+                        <p class="text-xl md:text-2xl font-semibold text-white">{{ editions.upcoming.dates_short | safe }}</p>
+                    </div>
+                    <div class="hidden sm:block w-px h-12 bg-slate-700/50"></div>
+                    <div class="flex flex-col items-center">
+                        <p class="text-sm text-slate-400 uppercase tracking-widest mb-1 font-semibold">Venue</p>
+                        <div class="flex items-center gap-2 text-xl md:text-2xl font-semibold text-white break-words text-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-indigo-400 shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            {{ editions.upcoming.venue }}
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    {% if site.application.open %}
+                        <a href="{{ site.application.link }}" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto px-10 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/25 text-lg">
+                            Click Here to Apply
+                        </a>
+                    {% else %}
+                        <div class="inline-block w-full sm:w-auto px-10 py-4 bg-white/10 text-white/40 font-medium rounded-xl border border-white/10 cursor-not-allowed backdrop-blur-sm text-lg">
+                            Apply Online (Closed)
+                        </div>
+                    {% endif %}
+                    <a href="{{ editions.upcoming.url }}" class="inline-block w-full sm:w-auto px-10 py-4 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-medium rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-100/25 text-lg">
+                        SWIM {{ editions.upcoming.year }}
+                    </a>
+                    {% if editions.upcoming.poster %}
+                        <a href="{{ editions.upcoming.poster }}" target="_blank" class="inline-block w-full sm:w-auto px-10 py-4 bg-white/10 hover:bg-white/20 text-white font-medium rounded-xl border border-white/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-sm text-lg">
+                            View Poster
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="mt-10 flex flex-col items-center gap-4">
+                    {% if site.application.open %}
+                        <div class="inline-flex items-center gap-2 px-6 py-3 bg-rose-500/10 border border-rose-500/20 rounded-full text-rose-300
+                                font-medium tracking-wide shadow-inner">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 animate-pulse text-rose-400"
+                                viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                    clip-rule="evenodd"/>
+                            </svg>
+                            Application Deadline: {{ site.application.deadline }}
+                        </div>
+                    {% endif %}
+                    <a
+                        href="/2026/participants%201.pdf"
+                        target="_blank"
+                        class="inline-flex items-center gap-2 text-indigo-300 hover:text-indigo-200 font-bold transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2
+                                    0 01-2 2z"/>
+                        </svg>
+                        First list of selected participants
+                    </a>
+                </div>
+                <div class="text-slate-400 mt-10 pt-6 border-t border-slate-700/50 font-light text-sm">
+                    For details on the previous edition, explore the
+                    <a
+                        href="2025/"
+                        target="_blank"
+                        class="text-indigo-400 hover:text-indigo-300 hover:underline font-medium transition-colors">
+                        SWIM 2025 Archive website
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ABOUT SECTION -->
+<section id="about" class="w-full py-20 bg-slate-50 border-b border-slate-200">
+    <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+        <h2 class="text-3xl md:text-4xl font-bold font-playfair text-slate-900 mb-8 border-l-4 border-indigo-600 pl-4">
+            About SWIM@KSoM
+        </h2>
+        <div class="space-y-6 text-lg text-slate-700 leading-relaxed font-light">
+            <p>
+                The Summer Workshop in Mathematics at Kerala School of Mathematics (SWIM@KSoM) is a rigorous and focused instructional
+                program designed to provide a deep dive into fundamental mathematical areas.
+            </p>
+            <p>
+                The workshop typically features in-depth lectures covering key concepts in
+                <strong class="font-medium text-slate-900">Mathematical Analysis, Abstract Algebra, and Linear Algebra</strong>. To
+                    reinforce understanding and develop problem-solving skills, these lectures are complemented by dedicated problem-solving
+                    sessions.
+            </p>
+            <p>
+                This intensive program is specifically tailored for highly motivated students, usually in their final year of a Bachelor
+                of Science degree or early years of a Master's program. Instruction is delivered by experienced and highly regarded
+                mathematicians in their respective fields.
+            </p>
+            <p>
+                The program is jointly organized by the
+                <strong class="font-medium text-slate-900">Kerala School of Mathematics</strong>
+                and
+                <strong class="font-medium text-slate-900">Kannur University</strong>.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- LOGISTICS SECTION -->
+<section class="w-full py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-8 max-w-5xl">
+        <h2 class="text-3xl md:text-4xl font-bold font-playfair text-slate-900 mb-12 text-center">Selection & Logistics</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 font-playfair">Evaluation Criteria</h3>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Selection is determined by evaluating academic performance in your undergraduate program, Class 12 marks, and official
+                    recommendation letters from your department head.
                 </p>
-                <p class="text-base md:text-lg text-slate-600 mb-10 max-w-3xl mx-auto">
-                    Jointly organized by <a href="https://ksom.res.in/" target="_blank" rel="noopener noreferrer"
-                        class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium transition-colors">Kerala
-                        School of Mathematics</a> and <a href="https://www.kannuruniversity.ac.in/" target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium transition-colors">Kannur
-                        University</a>.
+            </div>
+            <div class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 font-playfair">Application Process</h3>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Applications must be submitted exclusively through the online portal to be considered for SWIM
+                    {{ editions.upcoming.year }}. Shortlisted candidates will receive formal confirmation via email.
                 </p>
             </div>
-        </section>
-
-        <!-- ANNOUNCEMENT SECTION (Standalone box) -->
-        <section id="announcement" class="w-full py-16 bg-white border-b border-slate-200">
-            <div class="container mx-auto px-4 md:px-8 max-w-4xl">
-                <div
-                    class="relative overflow-hidden bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl text-center text-white ring-1 ring-white/10">
-                    <!-- Decorative Background Gradients -->
-                    <div
-                        class="absolute -top-24 -left-24 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl opacity-50 mix-blend-screen pointer-events-none">
-                    </div>
-                    <div
-                        class="absolute -bottom-24 -right-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl opacity-50 mix-blend-screen pointer-events-none">
-                    </div>
-
-                    <div class="relative z-10">
-                        <div
-                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-indigo-300 mb-6 backdrop-blur-sm">
-                            <span class="relative flex h-2 w-2">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-                            </span>
-                            Upcoming Edition
-                        </div>
-
-                        <h2
-                            class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-10 font-playfair tracking-tight">
-                            SWIM {{ editions.upcoming.year }}</h2>
-
-                        <div
-                            class="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 mb-10 w-full bg-white/5 py-6 px-4 rounded-2xl border border-white/5 backdrop-blur-sm">
-                            <div class="flex flex-col items-center">
-                                <p class="text-sm text-slate-400 uppercase tracking-widest mb-1 font-semibold">Dates</p>
-                                <p class="text-xl md:text-2xl font-semibold text-white">{{ editions.upcoming.dates_short | safe }}</p>
-                            </div>
-
-                            <div class="hidden sm:block w-px h-12 bg-slate-700/50"></div>
-
-                            <div class="flex flex-col items-center">
-                                <p class="text-sm text-slate-400 uppercase tracking-widest mb-1 font-semibold">Venue</p>
-                                <div
-                                    class="flex items-center gap-2 text-xl md:text-2xl font-semibold text-white break-words text-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-400 shrink-0"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    </svg>
-                                    {{ editions.upcoming.venue }}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                            {% if site.application.open %}
-                            <a href="{{ site.application.link }}"
-                                target="_blank" rel="noopener noreferrer"
-                                class="inline-block w-full sm:w-auto px-10 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/25 text-lg">
-                                Click Here to Apply
-                            </a>
-                            {% endif %}
-                            <a href="{{ editions.upcoming.url }}"
-                                class="inline-block w-full sm:w-auto px-10 py-4 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-medium rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-100/25 text-lg">
-                                SWIM {{ editions.upcoming.year }}
-                            </a>
-                            {% if editions.upcoming.poster %}
-                            <a href="{{ editions.upcoming.poster }}" target="_blank"
-                                class="inline-block w-full sm:w-auto px-10 py-4 bg-white/10 hover:bg-white/20 text-white font-medium rounded-xl border border-white/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-sm text-lg">
-                                View Poster
-                            </a>
-                            {% endif %}
-                        </div>
-
-                        {% if site.application.open %}
-                        <div class="mt-10 flex flex-col items-center gap-4">
-                            <div
-                                class="inline-flex items-center gap-2 px-6 py-3 bg-rose-500/10 border border-rose-500/20 rounded-full text-rose-300 font-medium tracking-wide shadow-inner">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-pulse text-rose-400"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Application Deadline: {{ site.application.deadline }}
-                            </div>
-                            <a href="/2026/participants%201.pdf" target="_blank"
-                                class="inline-flex items-center gap-2 text-indigo-300 hover:text-indigo-200 font-bold transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                </svg>
-                                First list of selected participants
-                            </a>
-                        </div>
-                        {% endif %}
-
-                        <div class="text-slate-400 mt-10 pt-6 border-t border-slate-700/50 font-light text-sm">
-                            For details on the previous edition, explore the
-                            <a href="2025/" target="_blank"
-                                class="text-indigo-400 hover:text-indigo-300 hover:underline font-medium transition-colors">
-                                SWIM 2025 Archive website
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 font-playfair">Accommodation</h3>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Complimentary meals and on-campus accommodation at
+                    {{ editions.upcoming.venue }} will be arranged for all selected participants.
+                </p>
             </div>
-        </section>
-
-        <!-- ABOUT SECTION -->
-        <section id="about" class="w-full py-20 bg-slate-50 border-b border-slate-200">
-            <div class="container mx-auto px-4 md:px-8 max-w-4xl">
-                <h2
-                    class="text-3xl md:text-4xl font-bold font-playfair text-slate-900 mb-8 border-l-4 border-indigo-600 pl-4">
-                    About SWIM@KSoM
-                </h2>
-                <div class="space-y-6 text-lg text-slate-700 leading-relaxed font-light">
-                    <p>
-                        The Summer Workshop in Mathematics at Kerala School of Mathematics (SWIM@KSoM) is a rigorous and
-                        focused instructional program designed to provide a deep dive into fundamental mathematical
-                        areas.
-                    </p>
-                    <p>
-                        The workshop typically features in-depth lectures covering key concepts in <strong
-                            class="font-medium text-slate-900">Mathematical Analysis, Abstract Algebra, and Linear
-                            Algebra</strong>. To reinforce understanding and develop problem-solving skills, these
-                        lectures are complemented by dedicated problem-solving sessions.
-                    </p>
-                    <p>
-                        This intensive program is specifically tailored for highly motivated students, usually in their
-                        final year of a Bachelor of Science degree or early years of a Master's program. Instruction is
-                        delivered by experienced and highly regarded mathematicians in their respective fields.
-                    </p>
-                    <p>
-                        The program is jointly organized by the <strong class="font-medium text-slate-900">Kerala School
-                            of Mathematics</strong> and <strong class="font-medium text-slate-900">Kannur
-                            University</strong>.
-                    </p>
-                </div>
+            <div class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 font-playfair">Certificates & FYUGP</h3>
+                <p class="text-slate-600 font-light leading-relaxed">
+                    Participants will receive a participation certificate upon successful completion. This program may be considered towards
+                    fulfilling the internship requirements under the Four Year Undergraduate Programme (FYUGP) subject to the approval of
+                    respective colleges.
+                </p>
             </div>
-        </section>
-
-        <!-- LOGISTICS SECTION -->
-        <section class="w-full py-20 bg-white">
-            <div class="container mx-auto px-4 md:px-8 max-w-5xl">
-                <h2 class="text-3xl md:text-4xl font-bold font-playfair text-slate-900 mb-12 text-center">Selection &
-                    Logistics</h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div
-                        class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
-                        <h3 class="text-xl font-bold text-slate-900 mb-4 font-playfair">Evaluation Criteria</h3>
-                        <p class="text-slate-600 font-light leading-relaxed">
-                            Selection is determined by evaluating academic performance in your undergraduate program,
-                            Class 12 marks, and official recommendation letters from your department head.
-                        </p>
-                    </div>
-
-                    <div
-                        class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
-                        <h3 class="text-xl font-bold text-slate-900 mb-4 font-playfair">Application Process</h3>
-                        <p class="text-slate-600 font-light leading-relaxed">
-                            Applications must be submitted exclusively through the online portal to be considered for
-                            SWIM {{ editions.upcoming.year }}. Shortlisted candidates will receive formal confirmation via email.
-                        </p>
-                    </div>
-
-                    <div
-                        class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
-                        <h3 class="text-xl font-bold text-slate-900 mb-4 font-playfair">Accommodation</h3>
-                        <p class="text-slate-600 font-light leading-relaxed">
-                            Complimentary meals and on-campus accommodation at {{ editions.upcoming.venue }}
-                            will be arranged for all selected participants.
-                        </p>
-                    </div>
-
-                    <div
-                        class="p-8 border border-slate-200 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
-                        <h3 class="text-xl font-bold text-slate-900 mb-4 font-playfair">Certificates & FYUGP</h3>
-                        <p class="text-slate-600 font-light leading-relaxed">
-                            Participants will receive a participation certificate upon successful completion. This
-                            program may be
-                            considered towards fulfilling the internship requirements under the Four Year Undergraduate
-                            Programme (FYUGP) subject to the approval of respective colleges.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </div>
+</section>
