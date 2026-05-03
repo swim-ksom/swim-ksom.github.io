@@ -28,8 +28,8 @@
   afternoon: Algebra
 - type: day
   date: May 12 (Tue)
-  morning: Analysis
-  afternoon: Linear Algebra
+  morning: Linear Algebra
+  afternoon: Analysis
 - type: day
   date: May 13 (Wed)
   morning: Algebra
@@ -40,8 +40,8 @@
   afternoon: Algebra
 - type: day
   date: May 15 (Fri)
-  morning: Analysis
-  afternoon: Linear Algebra
+  morning: Linear Algebra
+  afternoon: Analysis
 - type: week
   label: Week 3
 - type: day
