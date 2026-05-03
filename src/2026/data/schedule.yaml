@@ -69,11 +69,11 @@
 - type: day
   date: May 25 (Mon)
   morning: Analysis
-  afternoon: Linear Algebra
+  afternoon: Algebra
 - type: day
   date: May 26 (Tue)
-  morning: Analysis
-  afternoon: Algebra
+  morning: Linear Algebra
+  afternoon: Analysis
 - type: day
   date: May 27 (Wed)
   morning: Algebra
@@ -84,5 +84,5 @@
   afternoon: Algebra
 - type: day
   date: May 29 (Fri)
-  morning: Analysis
-  afternoon: Linear Algebra
+  morning: Linear Algebra
+  afternoon: Analysis
