@@ -46,24 +46,24 @@
   label: Week 3
 - type: day
   date: May 18 (Mon)
-  morning: Algebra
-  afternoon: Analysis
-- type: day
-  date: May 19 (Tue)
   morning: Analysis
   afternoon: Algebra
 - type: day
-  date: May 20 (Wed)
+  date: May 19 (Tue)
   morning: Linear Algebra
   afternoon: Analysis
 - type: day
-  date: May 21 (Thu)
+  date: May 20 (Wed)
   morning: Algebra
   afternoon: Linear Algebra
 - type: day
-  date: May 22 (Fri)
+  date: May 21 (Thu)
   morning: Analysis
-  afternoon: Linear Algebra
+  afternoon: Algebra
+- type: day
+  date: May 22 (Fri)
+  morning: Linear Algebra
+  afternoon: Analysis
 - type: week
   label: Week 4
 - type: day
