@@ -10,16 +10,16 @@
   afternoon: "Intro to Univ Math:2"
 - type: day
   date: May 6 (Wed)
-  morning: Algebra
-  afternoon: Linear Algebra
-- type: day
-  date: May 7 (Thu)
   morning: Linear Algebra
   afternoon: Algebra
 - type: day
-  date: May 8 (Fri)
+  date: May 7 (Thu)
   morning: Algebra
   afternoon: Linear Algebra
+- type: day
+  date: May 8 (Fri)
+  morning: Linear Algebra
+  afternoon: Algebra
 - type: week
   label: Week 2
 - type: day

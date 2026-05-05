@@ -5,6 +5,9 @@ course_title: Introduction to University Mathematics
 course_id: Intro to Univ Math
 lectures:
   - topics: "Building the Number System: Integers, Rationals, and Their Gaps (arithmetic, algebraic properties, gaps). Constructing the Real Numbers (formal construction, filling the gaps, complete ordered field)."
+    resources:
+      - title: "Problem Sheet"
+        url: "/2026/problem_sheets/univmath/krishna_1.pdf"
   - topics: "The Natural Numbers, Induction, and Sets (including operations and cardinality)."
   - topics: "Relations, Functions, and Logic (relations, functions, mathematical logic, logical statements, connectives, quantifiers)."
   - topics: "Axiom of Completeness: The Least Upper Bound Property, existence of square roots, density of rationals and irrationals in $\\textbf{R}$."
