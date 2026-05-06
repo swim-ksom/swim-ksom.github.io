@@ -5,6 +5,9 @@ course_title: Abstract Algebra
 course_id: Algebra
 lectures:
   - topics: "Covers matrix operations (addition, multiplication, scalar multiplication) and row reduction techniques. Focus on mechanics and solving linear systems."
+    resources:
+      - title: "Problem Sheet"
+        url: "/2026/problem_sheets/algebra/krishna_1.pdf"
   - topics: "Introduces matrix transposition and determinants, including computation methods and properties under row operations."
   - topics: "The necklace Problem and the merry go round problem were discussed as motivating examples to explore symmetries of objects."
   - topics: "Formal definition of groups and group actions. The orbit counting theorem."
