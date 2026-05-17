@@ -54,16 +54,16 @@
   afternoon: Analysis
 - type: day
   date: May 20 (Wed)
-  morning: Algebra
-  afternoon: Analysis
-- type: day
-  date: May 21 (Thu)
-  morning: Linear Algebra
+  morning: Analysis
   afternoon: Algebra
 - type: day
-  date: May 22 (Fri)
+  date: May 21 (Thu)
   morning: Algebra
-  afternoon: Analysis
+  afternoon: Linear Algebra
+- type: day
+  date: May 22 (Fri)
+  morning: Analydis
+  afternoon: Algebra
 - type: week
   label: Week 4
 - type: day
